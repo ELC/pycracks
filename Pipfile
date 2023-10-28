@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+typer = "*"
+gitpython = "*"
+packaging = "*"
+python-semantic-release = "*"
+
+[dev-packages]
+black = "*"
+
+[scripts]
+test = "pytest ./tests"
+
+[requires]
+python_version = "3.12"

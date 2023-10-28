@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools ~= 68.2.0", "wheel ~= 0.41.2", "setuptools-pipfile ~= 0.7.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycracks"
+authors = [
+    {name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com"},
+]
+description = "Detect Breaking Changes with Python."
+dynamic = ['version', 'readme']
+
+[tool.setuptools.dynamic]
+version = {attr = "pycracks.__version__"}
+readme = {file = ["README.md"]}
+
+[project.scripts]
+pycracks = "pycracks.__main__:app"
+
+[tool.setuptools-pipfile]
+
+[tool.semantic_release.branches.main]
+match = "(master|develop)"
+
+[tool.semantic_release]
+commit_message = "chore(release): bump version and update changelog [skip ci]"
+version_source = "tag"
+version_variables = [
+    "pycracks/__init__.py:__version__",
+]
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+exclude_commit_patterns = [
+    "chore*"
+]
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["chore", "feat", "fix"]
+minor_tags = ["feat"]
+patch_tags = ["fix"]
