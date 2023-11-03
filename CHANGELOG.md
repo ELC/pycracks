@@ -2,7 +2,11 @@
 
 
 
-## v0.3.0 (2023-11-03)
+## v0.2.1 (2023-11-03)
+
+### Fix
+
+* fix(release): update tagging ([`02e1c82`](https://github.com/ELC/pycracks/commit/02e1c82e1d02b804d31ef6e6ce13c8cd0332959f))
 
 
 ## v0.2.0 (2023-11-03)
