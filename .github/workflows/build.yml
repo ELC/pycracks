@@ -68,5 +68,5 @@ jobs:
       - name: Create Git Tag
         run: |
           version_number=$(semantic-release -v version --print)
-          git tag $version_number
+          git tag "v$version_number"
           git push origin --tags
