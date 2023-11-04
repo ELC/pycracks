@@ -24,7 +24,7 @@ jobs:
       - name: Set Up Git Identity
         run: |
           git config --global user.email "$(git log -1 --pretty=format:'%ae' | xargs)"
-          git config --global user.name "$(git log -1 --pretty=format:'%an' | xargs)"
+          git config --global user.name "${{ github.actor }}"
           git remote set-url origin "https://${{ github.actor }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }}"
 
       - name: Set up Python
@@ -43,17 +43,19 @@ jobs:
           differences=$(git diff | xargs)
 
           if [ -z "$differences" ]; then
+            echo "No changes needed"
             exit 0
           fi
+
+          echo "Version and/or Changelog needs to be updated"
 
           git add --all
           git commit -m "chore(release): bump version and update changelog"
           git push
 
-          echo "::error::There is a diff in the files"
+          echo "::error::The version and/or Changelog is outdated"
           echo "$differences"
           exit 1
-          
 
       - name: Build package
         run: |
