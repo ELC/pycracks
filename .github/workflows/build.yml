@@ -60,6 +60,12 @@ jobs:
       - name: Build package
         run: |
           pipx run build
+      
+      - name: Determine Target Version
+        id: version
+        run: |
+          package_version=$(semantic-release -v version --print)
+          echo "PACKAGE_VERSION=$package_version" >> $GITHUB_ENV
 
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@v1.8.10
@@ -69,6 +75,11 @@ jobs:
         
       - name: Create Git Tag
         run: |
-          version_number=$(semantic-release -v version --print)
-          git tag "v$version_number"
+          git tag "v$${{ env.PACKAGE_VERSION }}"
           git push origin --tags
+
+      - name: Create Github release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: "$v${{ env.PACKAGE_VERSION }}"
+          artifacts: "dist/*"
