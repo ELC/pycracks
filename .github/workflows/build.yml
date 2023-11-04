@@ -78,11 +78,14 @@ jobs:
           git tag "v${{ env.PACKAGE_VERSION }}"
           git push origin --tags
 
-      - uses: taiki-e/install-action@parse-changelog
-
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "lts"
+      
       - name: Extract Changelog for current version
         run: |
-          changelog_body=$(parse-changelog CHANGELOG.md)
+          npm install changelog-parser
+          changelog_body=$(changelog-parser CHANGELOG.md | jq -r ".versions[0].body")
           echo "CHANGELOG_BODY=$changelog_body" >> $GITHUB_ENV
 
       - name: Create Github release
