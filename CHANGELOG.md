@@ -2,6 +2,13 @@
 
 
 
+## v0.5.6 (2023-11-04)
+
+### Fix
+
+* fix: use raw string from changelog ([`e9c2ecb`](https://github.com/ELC/pycracks/commit/e9c2ecb55c481d0e97055e48bd325c092263889c))
+
+
 ## v0.5.5 (2023-11-04)
 
 ### Fix
