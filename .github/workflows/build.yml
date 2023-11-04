@@ -83,8 +83,7 @@ jobs:
       - name: Extract Changelog for current version
         run: |
           npm install -g changelog-parser
-          changelog_body=$(changelog-parser CHANGELOG.md | jq ".versions[0].body")
-          echo $chagelog_body
+          changelog_body=$(changelog-parser CHANGELOG.md | jq -r ".versions[0].body")
           echo "CHANGELOG_BODY=$changelog_body" >> $GITHUB_ENV
 
       - name: Create Github release
