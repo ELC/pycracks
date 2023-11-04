@@ -15,6 +15,11 @@ def run(test_command: str, paths: Iterable[Path], target_version: Version) -> bo
     fetch_tags(repo)
 
     literal_latest_version = get_latest_version(repo)
+    latest_version = parse(literal_latest_version)
+
+    if target_version == latest_version:
+        logger.error("Target version should be different than last version")
+        return False
 
     chekcout_paths_from_reference(repo, literal_latest_version, paths)
 
@@ -22,7 +27,6 @@ def run(test_command: str, paths: Iterable[Path], target_version: Version) -> bo
 
     discard_changes(repo)
 
-    latest_version = parse(literal_latest_version)
     return is_breaking_change_unexpected(target_version, latest_version, test_succeeded)
 
 
