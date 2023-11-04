@@ -2,6 +2,13 @@
 
 
 
+## v0.5.4 (2023-11-04)
+
+### Fix
+
+* fix(changelog-parser): use results as is from jq ([`a5b5c8b`](https://github.com/ELC/pycracks/commit/a5b5c8b4c636595b73a0509eae2d55752b775df8))
+
+
 ## v0.5.3 (2023-11-04)
 
 ### Fix
