@@ -2,6 +2,13 @@
 
 
 
+## v0.5.2 (2023-11-04)
+
+### Fix
+
+* fix(release): change changelog parser ([`1243e15`](https://github.com/ELC/pycracks/commit/1243e151dd1e30cd3aa4d6d83a8a822b5b64fff0))
+
+
 ## v0.5.1 (2023-11-04)
 
 ### Fix
