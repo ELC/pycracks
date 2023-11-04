@@ -78,8 +78,16 @@ jobs:
           git tag "v${{ env.PACKAGE_VERSION }}"
           git push origin --tags
 
+      - uses: taiki-e/install-action@parse-changelog
+
+      - name: Extract Changelog for current version
+        run: |
+          changelog_body=$(parse-changelog CHANGELOG.md v${{ env.PACKAGE_VERSION }})
+          echo "CHANGELOG_BODY=$changelog_body" >> $GITHUB_ENV
+
       - name: Create Github release
         uses: ncipollo/release-action@v1
         with:
           tag: "v${{ env.PACKAGE_VERSION }}"
+          body: "v${{ env.CHANGELOG_BODY }}"
           artifacts: "dist/*"
