@@ -2,6 +2,13 @@
 
 
 
+## v0.5.3 (2023-11-04)
+
+### Fix
+
+* fix(release): remove explicit node version ([`1214f1d`](https://github.com/ELC/pycracks/commit/1214f1d19cb060369c6d3a2ba19db9d66c214d18))
+
+
 ## v0.5.2 (2023-11-04)
 
 ### Fix
