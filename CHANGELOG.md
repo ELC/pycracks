@@ -2,6 +2,13 @@
 
 
 
+## v0.4.1 (2023-11-04)
+
+### Fix
+
+* fix(cicd): remove wrong characters ([`b9958a5`](https://github.com/ELC/pycracks/commit/b9958a526b7244af43a06012b841b2a48b3a908b))
+
+
 ## v0.4.0 (2023-11-04)
 
 ### Feature
