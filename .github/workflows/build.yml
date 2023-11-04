@@ -70,16 +70,16 @@ jobs:
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@v1.8.10
         with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+          user: "__token__"
+          password: "${{ secrets.PYPI_API_TOKEN }}"
         
       - name: Create Git Tag
         run: |
-          git tag "v$${{ env.PACKAGE_VERSION }}"
+          git tag "v${{ env.PACKAGE_VERSION }}"
           git push origin --tags
 
       - name: Create Github release
         uses: ncipollo/release-action@v1
         with:
-          tag: "$v${{ env.PACKAGE_VERSION }}"
+          tag: "v${{ env.PACKAGE_VERSION }}"
           artifacts: "dist/*"
