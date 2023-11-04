@@ -83,12 +83,12 @@ jobs:
       - name: Extract Changelog for current version
         run: |
           npm install changelog-parser
-          changelog_body=$(changelog-parser CHANGELOG.md | jq -r ".versions[0].body")
+          changelog_body=$(changelog-parser CHANGELOG.md | jq ".versions[0].body")
           echo "CHANGELOG_BODY=$changelog_body" >> $GITHUB_ENV
 
       - name: Create Github release
         uses: ncipollo/release-action@v1
         with:
           tag: "v${{ env.PACKAGE_VERSION }}"
-          body: "v${{ env.CHANGELOG_BODY }}"
+          body: "${{ env.CHANGELOG_BODY }}"
           artifacts: "dist/*"
