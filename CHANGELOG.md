@@ -2,6 +2,13 @@
 
 
 
+## v0.4.0 (2023-11-04)
+
+### Feature
+
+* feat(cicd): add Github Release step ([`8265f69`](https://github.com/ELC/pycracks/commit/8265f694634156ee935a73a844e18687daada39e))
+
+
 ## v0.3.0 (2023-11-04)
 
 ### Feature
