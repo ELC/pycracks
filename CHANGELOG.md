@@ -2,6 +2,13 @@
 
 
 
+## v0.5.0 (2023-11-04)
+
+### Feature
+
+* feat(release): add body to Github release from Changelog ([`ba89a16`](https://github.com/ELC/pycracks/commit/ba89a16d88183f321a1b4065fdb419a8f810750d))
+
+
 ## v0.4.1 (2023-11-04)
 
 ### Fix
