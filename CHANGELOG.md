@@ -2,6 +2,13 @@
 
 
 
+## v0.5.1 (2023-11-04)
+
+### Fix
+
+* fix(release): remove explicit version ([`cfab52e`](https://github.com/ELC/pycracks/commit/cfab52ea48fdb26900b9c94c03d52e9f570c47e1))
+
+
 ## v0.5.0 (2023-11-04)
 
 ### Feature
