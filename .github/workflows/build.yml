@@ -79,8 +79,6 @@ jobs:
           git push origin --tags
 
       - uses: actions/setup-node@v3
-        with:
-          node-version: "lts"
       
       - name: Extract Changelog for current version
         run: |
