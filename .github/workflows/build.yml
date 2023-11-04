@@ -82,7 +82,7 @@ jobs:
 
       - name: Extract Changelog for current version
         run: |
-          changelog_body=$(parse-changelog CHANGELOG.md v${{ env.PACKAGE_VERSION }})
+          changelog_body=$(parse-changelog CHANGELOG.md)
           echo "CHANGELOG_BODY=$changelog_body" >> $GITHUB_ENV
 
       - name: Create Github release
