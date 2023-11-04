@@ -2,6 +2,13 @@
 
 
 
+## v0.5.5 (2023-11-04)
+
+### Fix
+
+* fix(release): install changelog-parser globally ([`67ccefe`](https://github.com/ELC/pycracks/commit/67ccefe6afb728cc94b21b96e7593815d4c4783d))
+
+
 ## v0.5.4 (2023-11-04)
 
 ### Fix
