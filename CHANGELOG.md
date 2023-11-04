@@ -2,6 +2,13 @@
 
 
 
+## v0.5.7 (2023-11-04)
+
+### Fix
+
+* fix: use file to store changelog body ([`e089ed6`](https://github.com/ELC/pycracks/commit/e089ed6bc6afa0a3836f9882140a0fa87b7b1821))
+
+
 ## v0.5.6 (2023-11-04)
 
 ### Fix
