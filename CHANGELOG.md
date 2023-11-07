@@ -2,6 +2,13 @@
 
 
 
+## v0.10.0 (2023-11-07)
+
+### Feature
+
+* feat: add breaking change detection to CICD ([`2177f6c`](https://github.com/ELC/pycracks/commit/2177f6cae696b83d7fdef6d5d53425aadba80b79))
+
+
 ## v0.9.0 (2023-11-07)
 
 ### Feature
