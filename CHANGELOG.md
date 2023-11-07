@@ -2,6 +2,13 @@
 
 
 
+## v0.6.0 (2023-11-07)
+
+### Feature
+
+* feat: add unit test with partial coverage ([`670f5da`](https://github.com/ELC/pycracks/commit/670f5dadea5586cb34119ebf559b3274bbfbe624))
+
+
 ## v0.5.7 (2023-11-04)
 
 ### Fix
