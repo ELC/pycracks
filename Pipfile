@@ -7,7 +7,6 @@ name = "pypi"
 typer = "*"
 gitpython = "*"
 packaging = "*"
-python-semantic-release = "*"
 
 [dev-packages]
 black = "*"
@@ -18,6 +17,3 @@ pre-commit = "*"
 
 [scripts]
 test = "pytest ./tests --cov --cov-report term-missing"
-
-[requires]
-python_version = ">=3.8"
