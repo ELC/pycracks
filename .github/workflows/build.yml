@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  check_changelog:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.8'
+          python-version: "3.8"
       
       - name: Install dependencies
         run: |
@@ -57,6 +57,62 @@ jobs:
           echo "$differences"
           exit 1
 
+  test:
+    runs-on: ubuntu-latest
+    needs: check_changelog
+
+    strategy:
+      matrix:
+        version:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "${{ matrix.version }}"
+      
+      - name: Install dependencies
+        run: |
+          pip install pipenv==2023.2.4
+          pipenv install --dev --deploy
+
+      - name: Run Tests
+        run: |
+          pipenv run test
+      
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: false
+
+      - name: Set Up Git Identity
+        run: |
+          git config --global user.email "$(git log -1 --pretty=format:'%ae' | xargs)"
+          git config --global user.name "${{ github.actor }}"
+          git remote set-url origin "https://${{ github.actor }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+      
+      - name: Install dependencies
+        run: |
+          pip install pipx==1.2.1
+
       - name: Build package
         run: |
           pipx run build
@@ -64,6 +120,7 @@ jobs:
       - name: Determine Target Version
         id: version
         run: |
+          pipx install python-semantic-release==8.3.0
           package_version=$(semantic-release -v version --print)
           echo "PACKAGE_VERSION=$package_version" >> $GITHUB_ENV
 
