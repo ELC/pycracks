@@ -8,7 +8,13 @@
 
 * feat: add testing to CICD ([`e27773e`](https://github.com/ELC/pycracks/commit/e27773edb8d9bad1ee23cd07c804d9c42153071f))
 
+### Fix
+
+* fix(test): make python version 3.8+ ([`3c9e1fa`](https://github.com/ELC/pycracks/commit/3c9e1fa14265bcbcf26e8b5f5aa87f4d081225af))
+
 ### Unknown
+
+* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`b0035bb`](https://github.com/ELC/pycracks/commit/b0035bbbda2679de13221ab87b0f8ba2a780f2a4))
 
 * Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`42adb0d`](https://github.com/ELC/pycracks/commit/42adb0db76197000faf0ef4667533ac9c1a8f479))
 
