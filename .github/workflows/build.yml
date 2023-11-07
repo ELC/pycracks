@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.8"
-      
+
       - name: Install dependencies
         run: |
           pip install pipx==1.2.1
@@ -76,7 +76,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "${{ matrix.version }}"
-      
+
       - name: Install dependencies
         run: |
           pip install pipenv==2023.2.4
@@ -85,8 +85,7 @@ jobs:
       - name: Run Tests
         run: |
           pipenv run test
-      
-  
+
   deploy:
     runs-on: ubuntu-latest
     needs: test
@@ -108,7 +107,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.8"
-      
+
       - name: Install dependencies
         run: |
           pip install pipx==1.2.1
@@ -116,7 +115,7 @@ jobs:
       - name: Build package
         run: |
           pipx run build
-      
+
       - name: Determine Target Version
         id: version
         run: |
@@ -129,14 +128,14 @@ jobs:
         with:
           user: "__token__"
           password: "${{ secrets.PYPI_API_TOKEN }}"
-        
+
       - name: Create Git Tag
         run: |
           git tag "v${{ env.PACKAGE_VERSION }}"
           git push origin --tags
 
       - uses: actions/setup-node@v3
-      
+
       - name: Extract Changelog for current version
         run: |
           npm install -g changelog-parser

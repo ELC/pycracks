@@ -1,16 +1,13 @@
+import logging
 from pathlib import Path
-import typer
 from typing import Annotated
 
-from . import __version__
-
-from .pycracks import run
-
-import logging
-from .logger import logger
-
+import typer
 from packaging.version import parse
 
+from . import __version__
+from .logger import logger
+from .pycracks import run
 
 app = typer.Typer(add_completion=False)
 
@@ -21,8 +18,8 @@ def main(
         str, typer.Option("--test-command", "-c", help="Command that runs the test")
     ] = "python -m pipenv run test",
     paths: Annotated[
-        list[str], typer.Option("--path", "-p", help="Paths to checkout")
-    ] = ["tests"],
+        tuple[str], typer.Option("--path", "-p", help="Paths to checkout")
+    ] = ("tests",),
     target_version: Annotated[
         str, typer.Option("--target-version", "-t", help="Version to release")
     ] = "1.0.0",

@@ -6,7 +6,7 @@ from pycracks.pycracks import is_breaking_change_expected
 
 
 @composite
-def versions(draw, major: int = 0, minor: int = 0, patch: int = 0) -> Version:
+def versions(draw, major: int = 0, minor: int = 0, patch: int = 0) -> Version:  # type: ignore
     major = major or draw(integers(min_value=0))
     minor = minor or draw(integers(min_value=0))
     patch = patch or draw(integers(min_value=0))

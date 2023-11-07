@@ -1,14 +1,14 @@
 from __future__ import annotations
 
-from typing import Iterable
-from .logger import logger
-from pathlib import Path
-
-from git import Repo
-import git.exc
 import subprocess
+from pathlib import Path
+from typing import Iterable
 
+import git.exc
+from git import Repo
 from packaging.version import Version, parse
+
+from .logger import logger
 
 
 def run(test_command: str, paths: Iterable[Path], target_version: Version) -> bool:
@@ -63,7 +63,7 @@ def fetch_tags(repo: Repo) -> None:
 
 def get_latest_version(repo: Repo) -> str:
     logger.info("Get latest Tag")
-    latest_tag = repo.git.describe(abbrev=0, tags=True)
+    latest_tag: str = repo.git.describe(abbrev=0, tags=True)
     return latest_tag
 
 
