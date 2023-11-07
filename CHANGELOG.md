@@ -2,6 +2,13 @@
 
 
 
+## v0.8.0 (2023-11-07)
+
+### Feature
+
+* feat: add pre-commit hooks ([`0e47f25`](https://github.com/ELC/pycracks/commit/0e47f25997c01c4b81b60e24d8aa3b267ae57578))
+
+
 ## v0.7.0 (2023-11-07)
 
 ### Feature
