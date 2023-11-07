@@ -57,6 +57,12 @@ jobs:
           echo "$differences"
           exit 1
 
+      - name: Check Breaking changes
+        run: |
+          pipx install pycracks
+          package_version=$(semantic-release -v version --print)
+          pycracks -vv -t $package_version
+
   test:
     runs-on: ubuntu-latest
     needs: check_changelog
