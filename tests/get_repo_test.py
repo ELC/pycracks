@@ -1,12 +1,11 @@
+import tempfile
 from pathlib import Path
 from typing import Generator
-from pycracks.pycracks import get_repo
-
-import tempfile
 
 import pytest
-
 from git import Repo
+
+from pycracks.pycracks import get_repo
 
 
 @pytest.fixture
