@@ -11,9 +11,12 @@ python-semantic-release = "*"
 
 [dev-packages]
 black = "*"
+pytest = "*"
+pytest-cov = "*"
+hypothesis = "*"
 
 [scripts]
-test = "pytest ./tests"
+test = "pytest ./tests --cov --cov-report term-missing"
 
 [requires]
 python_version = "3.12"

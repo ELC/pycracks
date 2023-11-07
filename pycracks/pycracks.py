@@ -5,6 +5,7 @@ from .logger import logger
 from pathlib import Path
 
 from git import Repo
+import git.exc
 import subprocess
 
 from packaging.version import Version, parse
@@ -27,18 +28,21 @@ def run(test_command: str, paths: Iterable[Path], target_version: Version) -> bo
 
     discard_changes(repo)
 
-    return is_breaking_change_unexpected(target_version, latest_version, test_succeeded)
+    return is_breaking_change_expected(target_version, latest_version, test_succeeded)
 
 
-def is_breaking_change_unexpected(
+def is_breaking_change_expected(
     target_version: Version, latest_version: Version, test_succeeded: bool
 ) -> bool:
     major_increased = target_version.major > latest_version.major
     return major_increased or test_succeeded
 
 
-def get_repo() -> Repo:
-    return Repo(Path("."))
+def get_repo(path: Path = Path(".")) -> Repo:
+    try:
+        return Repo(path)
+    except git.exc.InvalidGitRepositoryError as exception:
+        raise ValueError("repo not found") from exception
 
 
 def run_test_command(test_command: str) -> bool:
