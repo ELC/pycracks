@@ -79,8 +79,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pipenv==2023.2.4
+          pip install pipenv==2023.2.4 pre-commit==3.5.0
           pipenv install --dev --deploy
+
+      - name: Run Linting
+        run: |
+          pipenv run pre-commit run --all-files
 
       - name: Run Tests
         run: |
