@@ -2,6 +2,17 @@
 
 
 
+## v0.9.0 (2023-11-07)
+
+### Feature
+
+* feat: add pre-commit check to CICD ([`3c38ac6`](https://github.com/ELC/pycracks/commit/3c38ac687b20c89da6c1ee2da7399c5459655a70))
+
+### Unknown
+
+* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`bdc8c55`](https://github.com/ELC/pycracks/commit/bdc8c55071b2cf727a2d5c243585d3915524418d))
+
+
 ## v0.8.0 (2023-11-07)
 
 ### Feature
