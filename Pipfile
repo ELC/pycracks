@@ -14,9 +14,10 @@ black = "*"
 pytest = "*"
 pytest-cov = "*"
 hypothesis = "*"
+pre-commit = "*"
 
 [scripts]
 test = "pytest ./tests --cov --cov-report term-missing"
 
 [requires]
-python_version = "3.12"
+python_version = ">=3.8"
