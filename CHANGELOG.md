@@ -10,6 +10,10 @@
 
 ### Fix
 
+* fix(test): make hypothesis less strict ([`23899c1`](https://github.com/ELC/pycracks/commit/23899c16c2d9cabf89d57156794415294ba6feff))
+
+* fix(cicd): remove required python version in pipfile ([`c324399`](https://github.com/ELC/pycracks/commit/c324399f405decc0d2029dee75bed50359ef8217))
+
 * fix(test): make python version 3.8+ ([`3c9e1fa`](https://github.com/ELC/pycracks/commit/3c9e1fa14265bcbcf26e8b5f5aa87f4d081225af))
 
 ### Unknown
