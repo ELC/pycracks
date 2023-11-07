@@ -2,6 +2,17 @@
 
 
 
+## v0.7.0 (2023-11-07)
+
+### Feature
+
+* feat: add testing to CICD ([`e27773e`](https://github.com/ELC/pycracks/commit/e27773edb8d9bad1ee23cd07c804d9c42153071f))
+
+### Unknown
+
+* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`42adb0d`](https://github.com/ELC/pycracks/commit/42adb0db76197000faf0ef4667533ac9c1a8f479))
+
+
 ## v0.6.0 (2023-11-07)
 
 ### Feature
