@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix: use typing for built in tuple ([`8fd17ea`](https://github.com/ELC/pycracks/commit/8fd17ea78c2419aaac5b96f95706af499c56982c))
+
 * fix(compatibility): use typing_extensions to support Python 3.8 ([`f78080a`](https://github.com/ELC/pycracks/commit/f78080af550d0baab2bf7915dd1b967f30c36c67))
 
 * fix: use local version to check breaking changes ([`56323fc`](https://github.com/ELC/pycracks/commit/56323fc965b0c75ecfbb8bdc23f8562ca28a12e6))
