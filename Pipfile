@@ -7,6 +7,7 @@ name = "pypi"
 typer = "*"
 gitpython = "*"
 packaging = "*"
+typing-extensions = "*"
 
 [dev-packages]
 black = "*"

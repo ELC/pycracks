@@ -1,9 +1,9 @@
 import logging
 from pathlib import Path
-from typing import Annotated
 
 import typer
 from packaging.version import parse
+from typing_extensions import Annotated
 
 from . import __version__
 from .logger import logger
