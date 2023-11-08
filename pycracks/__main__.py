@@ -1,5 +1,6 @@
 import logging
 from pathlib import Path
+from typing import Tuple
 
 import typer
 from packaging.version import parse
@@ -18,7 +19,7 @@ def main(
         str, typer.Option("--test-command", "-c", help="Command that runs the test")
     ] = "python -m pipenv run test",
     paths: Annotated[
-        tuple[str], typer.Option("--path", "-p", help="Paths to checkout")
+        Tuple[str], typer.Option("--path", "-p", help="Paths to checkout")
     ] = ("tests",),
     target_version: Annotated[
         str, typer.Option("--target-version", "-t", help="Version to release")
