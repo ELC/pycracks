@@ -34,7 +34,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install pipx==1.2.1 pipenv==2023.2.4
 
       - name: Update Version and Changelog
         run: |
@@ -60,6 +60,7 @@ jobs:
       - name: Check Breaking changes
         run: |
           package_version=$(semantic-release -v version --print)
+          pipenv install --dev --deploy
           pipx install .
           pycracks -vv -t $package_version
 
