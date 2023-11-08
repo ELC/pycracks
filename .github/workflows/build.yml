@@ -59,8 +59,8 @@ jobs:
 
       - name: Check Breaking changes
         run: |
-          pipx install pycracks
           package_version=$(semantic-release -v version --print)
+          pipx install .
           pycracks -vv -t $package_version
 
   test:
