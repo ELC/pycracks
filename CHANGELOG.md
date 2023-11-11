@@ -2,9 +2,11 @@
 
 
 
-## v0.10.0 (2023-11-08)
+## v0.10.0 (2023-11-11)
 
 ### Feature
+
+* feat: install dependencies before checking ([`cd18778`](https://github.com/ELC/pycracks/commit/cd187780ed5eecd30b31f03db16152668b5a9c83))
 
 * feat: add breaking change detection to CICD ([`2177f6c`](https://github.com/ELC/pycracks/commit/2177f6cae696b83d7fdef6d5d53425aadba80b79))
 
