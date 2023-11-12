@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix(cicd): test alternative test reporter ([`85c710e`](https://github.com/ELC/pycracks/commit/85c710ecb96c0ff6d78748eb33bb0626cedbea60))
+
 * fix(cid): modify permisisons ([`441332b`](https://github.com/ELC/pycracks/commit/441332b7b66ee0cd93437342c7d86fcfdc7db777))
 
 * fix(cicd): only run deploy on master ([`9415da9`](https://github.com/ELC/pycracks/commit/9415da9f50abb4e39a2595eef81f557d0828c3ee))
