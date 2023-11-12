@@ -102,6 +102,8 @@ jobs:
 
       - name: Check Breaking changes
         run: |
+          git fetch -v -v -v --all --unshallow
+          git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
           pipx install .
           pycracks -vv -t $(semantic-release -v version --print)
 
