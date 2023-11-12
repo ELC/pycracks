@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix(cicd): use global pipenv as default test command ([`f0d26cc`](https://github.com/ELC/pycracks/commit/f0d26cc6ae94172b03283f56f23c4e9a664b8e6a))
+
 * fix(cicd): attach head ([`bc52c89`](https://github.com/ELC/pycracks/commit/bc52c89c601c0aa6222719f90b90786dc5edfcc3))
 
 * fix(cicd): check breaking changes in matrix ([`c0e13b8`](https://github.com/ELC/pycracks/commit/c0e13b8761aef174f8e1bdc5086999c9ed036400))
