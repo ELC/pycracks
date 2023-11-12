@@ -2,7 +2,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/pycracks?style=for-the-badge)](https://pypi.org/project/PyCracks/)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/elc/pycracks/build.yml?style=for-the-badge&logo=github&label=CICD)
 [![Coveralls branch](https://img.shields.io/coverallsCoverage/github/ELC/pycracks?branch=master&style=for-the-badge)](https://coveralls.io/github/ELC/pycracks)
-
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FELC%2Fpycracks.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FELC%2Fpycracks?ref=badge_shield)
 
 # Pycracks
 
@@ -13,3 +13,6 @@
 ## Installation
 
 ## F.A.Q.
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FELC%2Fpycracks.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FELC%2Fpycracks?ref=badge_large)
