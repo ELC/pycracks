@@ -10,6 +10,12 @@
 
 ### Fix
 
+* fix(cicd): use proper static variable names ([`ca7b6fa`](https://github.com/ELC/pycracks/commit/ca7b6fa6c28bf96bbab4474724d7a6f2bcc353cc))
+
+* fix(cicd): use attached HEAD ([`47c5184`](https://github.com/ELC/pycracks/commit/47c51845122e697d50a80ff9a46f8fc9958d103a))
+
+* fix(cicd): run pipeline on PRs ([`69c3758`](https://github.com/ELC/pycracks/commit/69c375835a061671e465e6c4e0e8b2a89fd7489f))
+
 * fix(cicd): use different coverage reporter ([`dff26e4`](https://github.com/ELC/pycracks/commit/dff26e44cb026c941214f52cfe9232a3f1a94e45))
 
 
