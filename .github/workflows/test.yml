@@ -3,9 +3,6 @@ name: Test
 on:
   workflow_run:
     workflows: Check
-    branches:
-      - "master"
-      - "develop"
     types: completed
 
 permissions:
@@ -20,7 +17,7 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion }} == 'success'
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     strategy:
       matrix:
