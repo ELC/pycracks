@@ -2,6 +2,13 @@
 
 
 
+## v0.13.1 (2023-11-12)
+
+### Fix
+
+* fix(cicd): tag without a message ([`380361c`](https://github.com/ELC/pycracks/commit/380361c8e188e7dec381d67ee5e765e9fe6902d2))
+
+
 ## v0.13.0 (2023-11-12)
 
 ### Feature
