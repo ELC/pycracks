@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1 pipenv==2023.2.4
+          pip install pipx==1.2.1
 
       - name: Update Version and Changelog
         run: |
@@ -58,23 +58,16 @@ jobs:
             exit 0
           fi
 
-          echo "Version and/or Changelog needs to be updated"
+          echo "::error::The version and/or Changelog is outdated"
+          echo "$differences"
 
           git add --all
           git commit -m "chore(release): bump version and update changelog"
           git push
 
-          echo "::error::The version and/or Changelog is outdated"
-          echo "$differences"
           sleep 30
           exit 1
 
-      - name: Check Breaking changes
-        run: |
-          package_version=$(semantic-release -v version --print)
-          pipenv install --dev --deploy
-          pipx install .
-          pycracks -vv -t $package_version
   test:
     runs-on: ubuntu-latest
 
@@ -98,12 +91,19 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pipenv==2023.2.4
+          pip install pipx==1.2.1
+          pipx install pipenv==2023.2.4
+          pipx install python-semantic-release==8.3.0
           pipenv install --dev --deploy
 
       - name: Run Tests
         run: |
           pipenv run test
+
+      - name: Check Breaking changes
+        run: |
+          pipx install .
+          pycracks -vv -t $(semantic-release -v version --print)
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
