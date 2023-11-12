@@ -12,6 +12,8 @@
 
 ### Fix
 
+* fix(cicd): update job condition ([`acb960c`](https://github.com/ELC/pycracks/commit/acb960ca4f36e2a9713fe1c5b17dd598c412c317))
+
 * fix(cicd): run tests on all branches ([`df77bc6`](https://github.com/ELC/pycracks/commit/df77bc6b04b2717af9f52fc3ca583866ab398ade))
 
 * fix(cicd): add permission to generate token ([`67ea2d6`](https://github.com/ELC/pycracks/commit/67ea2d6ee44ffec089ba9b5e9903f7ff0e2a4b47))
