@@ -6,7 +6,9 @@
 
 ### Feature
 
+
 * feat(cicd): use hosted pre-commit.ci ([`c7fe60b`](https://github.com/ELC/pycracks/commit/c7fe60bdf61e1eff4710d666a87a61f74720c4db))
+
 
 * feat(cicd): add test report ([`2c77430`](https://github.com/ELC/pycracks/commit/2c77430f4db3c02fd212fa1191254825b3b2e159))
 
