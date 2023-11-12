@@ -106,15 +106,14 @@ jobs:
 
       - name: Run Tests
         run: |
-          pipenv run test
+          pipenv run test > pytest-coverage.txt
 
       - name: Test Report
-        uses: dorny/test-reporter@v1
+        uses: MishaKav/pytest-coverage-comment@v1.1.48
         if: success() || failure()
         with:
-          name: Pytest Coverage Report
-          path: coverage.xml
-          reporter: java-junit
+          pytest-coverage-path: pytest-coverage.txt
+          junitxml-path: coverage.xml
   deploy:
     runs-on: ubuntu-latest
     needs: test
