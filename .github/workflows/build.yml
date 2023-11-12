@@ -117,7 +117,6 @@ jobs:
         with:
           flag-name: py${{ matrix.python-version }}
           parallel: true
-          files: coverage.xml coverage-report.xml
 
   deploy:
     runs-on: ubuntu-latest
