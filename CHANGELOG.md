@@ -2,7 +2,11 @@
 
 
 
-## v0.13.1 (2023-11-12)
+## v0.14.0 (2023-11-12)
+
+### Feature
+
+* feat(cicd): combine check and test pipelines ([`a28cf2e`](https://github.com/ELC/pycracks/commit/a28cf2e43970811409972c22983dc5b556919b85))
 
 ### Fix
 
