@@ -115,8 +115,9 @@ jobs:
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
         with:
-          flag-name: "${{ matrix.python-version }}"
+          flag-name: ${{ matrix.version }}
           parallel: true
+          debug: true
 
   test-finish:
     needs: test
@@ -127,7 +128,6 @@ jobs:
       uses: coverallsapp/github-action@v2
       with:
         parallel-finished: true
-        carryforward: "3.8,3.9,3.10,3.10"
 
   deploy:
     runs-on: ubuntu-latest
