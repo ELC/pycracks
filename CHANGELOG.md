@@ -6,9 +6,13 @@
 
 ### Feature
 
+* feat(cicd): use hosted pre-commit.ci ([`c7fe60b`](https://github.com/ELC/pycracks/commit/c7fe60bdf61e1eff4710d666a87a61f74720c4db))
+
 * feat(cicd): add test report ([`2c77430`](https://github.com/ELC/pycracks/commit/2c77430f4db3c02fd212fa1191254825b3b2e159))
 
 ### Fix
+
+* fix(cicd): remove manual file specification in coveralls ([`2c7d4f9`](https://github.com/ELC/pycracks/commit/2c7d4f99738f4558d11ef61480c9935cfa10a57c))
 
 * fix: use official coveralls action ([`371b582`](https://github.com/ELC/pycracks/commit/371b582212467270f40b246ac5726199d87ea7df))
 
