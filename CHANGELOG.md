@@ -2,6 +2,19 @@
 
 
 
+## v0.13.0 (2023-11-12)
+
+### Feature
+
+* feat(cicd): use tursted publisher for PyPI ([`ce434b1`](https://github.com/ELC/pycracks/commit/ce434b1c421c4c8b52f3e4ad1623fc1bcee1c8d3))
+
+* feat(cicd): divide pipelines into composable parts ([`2bd2a82`](https://github.com/ELC/pycracks/commit/2bd2a82b12a0c8c541b9ae070cf7e3b5217e0689))
+
+### Fix
+
+* fix: update license information for PyPI ([`e356913`](https://github.com/ELC/pycracks/commit/e3569138ca3b910e7773b68ad8724e81f37c6d31))
+
+
 ## v0.12.1 (2023-11-12)
 
 ### Fix
