@@ -2,6 +2,13 @@
 
 
 
+## v0.14.3 (2023-11-12)
+
+### Fix
+
+* fix: add trove classifiers ([`bba2a95`](https://github.com/ELC/pycracks/commit/bba2a95c27038512b35a22028113ac49c7246d69))
+
+
 ## v0.14.2 (2023-11-12)
 
 ### Fix
