@@ -10,6 +10,10 @@
 
 ### Fix
 
+* fix(cicd): use test reporter with JUnit ([`4122c1f`](https://github.com/ELC/pycracks/commit/4122c1f485aade954625df7d4d9682e7c486c202))
+
+* fix(cicd): cancell previous run on new commits ([`4776e40`](https://github.com/ELC/pycracks/commit/4776e40b559cfbcc5b452b1bc0e183fd1d3cd7fd))
+
 * fix(cicd): use global write permissions for pull-requests ([`94b92dc`](https://github.com/ELC/pycracks/commit/94b92dcca5bf917fd5d134e691323cdaf0c7560c))
 
 * fix(cicd): give write-all permissions ([`1c4d175`](https://github.com/ELC/pycracks/commit/1c4d175791f2c7a1bc89c7a9a75eb0c50dcda659))
