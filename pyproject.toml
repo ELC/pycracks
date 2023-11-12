@@ -39,3 +39,6 @@ exclude_commit_patterns = [
 allowed_tags = ["chore", "feat", "fix"]
 minor_tags = ["feat"]
 patch_tags = ["fix"]
+
+[tool.coverage.run]
+relative_files = true
