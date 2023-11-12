@@ -98,12 +98,10 @@ jobs:
           pipenv run test
 
       - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()
+        uses: orgoro/coverage@v3.1
         with:
-          name: Pytest Coverage Report
-          path: coverage.xml
-          reporter: java-junit
+          coverageFile: coverage.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     runs-on: ubuntu-latest
