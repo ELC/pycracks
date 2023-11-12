@@ -17,4 +17,4 @@ hypothesis = "*"
 pre-commit = "*"
 
 [scripts]
-test = "pytest --cov --cov-report term-missing:skip-covered --cov-report xml:coverage.xml ./tests"
+test = "pytest --cov --cov-report term-missing:skip-covered --junitxml=coverage.xml ./tests"
