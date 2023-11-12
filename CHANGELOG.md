@@ -8,6 +8,7 @@
 
 * fix(release): ignore merge commits ([`c4d5a2f`](https://github.com/ELC/pycracks/commit/c4d5a2f430baec4a4e0efae8e7fd313bce5bce0d))
 
+
 ## v0.11.0 (2023-11-12)
 
 ### Feature
