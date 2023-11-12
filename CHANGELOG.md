@@ -2,17 +2,52 @@
 
 
 
+## v0.12.0 (2023-11-12)
+
+### Unknown
+
+* Merge branch &#39;master&#39; into develop ([`0ae652f`](https://github.com/ELC/pycracks/commit/0ae652f16fd13ad86c0dab791a009974e5471419))
+
+
 ## v0.11.0 (2023-11-12)
 
 ### Feature
 
+* feat(cicd): use hosted pre-commit.ci ([`d2ba540`](https://github.com/ELC/pycracks/commit/d2ba5402cb86a07f308425fc48dd89ab03e1e028))
 
 * feat(cicd): use hosted pre-commit.ci ([`c7fe60b`](https://github.com/ELC/pycracks/commit/c7fe60bdf61e1eff4710d666a87a61f74720c4db))
-
 
 * feat(cicd): add test report ([`2c77430`](https://github.com/ELC/pycracks/commit/2c77430f4db3c02fd212fa1191254825b3b2e159))
 
 ### Fix
+
+* fix(cicd): add test-finish step ([`e1082f1`](https://github.com/ELC/pycracks/commit/e1082f119a93e60e224cf122d6ce464130f8eab7))
+
+* fix(cicd): remove manual file specification in coveralls ([`cf808bb`](https://github.com/ELC/pycracks/commit/cf808bb6490fd40bf6cffab4d892e09cb0783be9))
+
+* fix: use official coveralls action ([`92ae4d6`](https://github.com/ELC/pycracks/commit/92ae4d6a5f1cac11ff385a2a447016cf9da4c4b6))
+
+* fix(cicd): test alternative test reporter ([`d18bae1`](https://github.com/ELC/pycracks/commit/d18bae10ade842a9df85cbe60b3224b671e5b911))
+
+* fix(cid): modify permisisons ([`7c4ab2d`](https://github.com/ELC/pycracks/commit/7c4ab2d31f555c28022d14340d677cc96eb360be))
+
+* fix(cicd): only run deploy on master ([`94cef80`](https://github.com/ELC/pycracks/commit/94cef80f145d42e6f0e94750a6970c47bffab922))
+
+* fix(cicd): use test reporter with JUnit ([`716371b`](https://github.com/ELC/pycracks/commit/716371bfb038650d2107c093a22baf6afa89b416))
+
+* fix(cicd): cancell previous run on new commits ([`809ecf0`](https://github.com/ELC/pycracks/commit/809ecf0c6729ab8b0a89bdd0854e45a4b760aca8))
+
+* fix(cicd): use global write permissions for pull-requests ([`d5c0f55`](https://github.com/ELC/pycracks/commit/d5c0f5522497df44c58fd574d1cdb53629d4e05d))
+
+* fix(cicd): give write-all permissions ([`d863acc`](https://github.com/ELC/pycracks/commit/d863acc8ab23cf7aa923f184e4bf8b736ff25ca4))
+
+* fix(cicd): add pull-request write permision ([`d4f498a`](https://github.com/ELC/pycracks/commit/d4f498aaa1f3eac446e42b18ccd26a362c6af013))
+
+* fix(cicd): use proper static variable names ([`4d74f2d`](https://github.com/ELC/pycracks/commit/4d74f2d662c30ad99731345f341166df6af4c019))
+
+* fix(cicd): use attached HEAD ([`59008aa`](https://github.com/ELC/pycracks/commit/59008aa485f9f54a046f7ae13c2170823b91e00c))
+
+* fix(cicd): run pipeline on PRs ([`ca3f124`](https://github.com/ELC/pycracks/commit/ca3f12455c0ca1c96f0d22f07606592e5f09293a))
 
 * fix(cicd): add test-finish step ([`0e06d21`](https://github.com/ELC/pycracks/commit/0e06d219280ea572e97871372d194c6887e3aed5))
 
