@@ -6,6 +6,8 @@
 
 ### Fix
 
+* fix(cicd): finish explicit flags ([`c956afe`](https://github.com/ELC/pycracks/commit/c956afec7507df8c8416f2de82327fd117a55185))
+
 * fix(release): ignore merge commits ([`c4d5a2f`](https://github.com/ELC/pycracks/commit/c4d5a2f430baec4a4e0efae8e7fd313bce5bce0d))
 
 
