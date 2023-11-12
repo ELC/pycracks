@@ -12,11 +12,11 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   check_changelog:
     runs-on: ubuntu-latest
-    permissions: "write-all"
 
     steps:
       - uses: actions/checkout@v3
