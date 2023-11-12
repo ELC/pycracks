@@ -97,6 +97,14 @@ jobs:
         run: |
           pipenv run test
 
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Pytest Coverage Report
+          path: coverage.xml
+          reporter: java-junit
+
   deploy:
     runs-on: ubuntu-latest
     needs: test
