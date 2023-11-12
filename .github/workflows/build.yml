@@ -110,7 +110,9 @@ jobs:
         if: success() || failure()
         with:
           pytest-coverage-path: pytest-coverage.txt
+          pytest-xml-coverage-path: coverage-report.xml
           junitxml-path: coverage.xml
+          create-new-comment: true
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
