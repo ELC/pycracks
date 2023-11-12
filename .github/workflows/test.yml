@@ -1,0 +1,67 @@
+name: Test
+
+on:
+  workflow_run:
+    workflows: Check
+    branches: master
+    types: completed
+
+permissions:
+  actions: read
+  pull-requests: write
+  checks: write
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion }} == 'success'
+
+    strategy:
+      matrix:
+        version:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "${{ matrix.version }}"
+
+      - name: Install dependencies
+        run: |
+          pip install pipenv==2023.2.4
+          pipenv install --dev --deploy
+
+      - name: Run Tests
+        run: |
+          pipenv run test
+
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        if: always()
+        with:
+          flag-name: "${{ matrix.version }}"
+          parallel: true
+          file: "coverage-report.xml"
+          format: "cobertura"
+          measure: true
+
+  test-finish:
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Coveralls Finished
+      uses: coverallsapp/github-action@v2
+      with:
+        parallel-finished: true
