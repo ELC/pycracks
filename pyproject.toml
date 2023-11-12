@@ -8,7 +8,15 @@ authors = [
     {name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com"},
 ]
 description = "Detect Breaking Changes with Python."
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
 dynamic = ['version', 'readme']
+
+[project.urls]
+homepage = "https://github.com/elc/pycracks"
+documentation = "https://github.com/elc/pycracks"
+repository = "https://github.com/elc/pycracks"
+changelog = "https://github.com/ELC/pycracks/blob/master/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
 version = {attr = "pycracks.__version__"}
