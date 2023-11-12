@@ -16,8 +16,7 @@ permissions:
 jobs:
   check_changelog:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    permissions: "write-all"
 
     steps:
       - uses: actions/checkout@v3
