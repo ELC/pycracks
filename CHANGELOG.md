@@ -4,13 +4,29 @@
 
 ## v0.12.0 (2023-11-12)
 
-### Unknown
+### Fix
 
-* Merge pull request #6 from ELC/develop
+* fix(cicd): remove custom action for test reports ([`b82e79b`](https://github.com/ELC/pycracks/commit/b82e79b9912a292d8c1fcef2853c096808601a24))
 
-Develop ([`c162da7`](https://github.com/ELC/pycracks/commit/c162da79bc227d8a37b22dedc82dbb82e03ca32f))
+* fix(cicd): make format explicit ([`af45e2a`](https://github.com/ELC/pycracks/commit/af45e2ab2b08dcb72e5aafa1c674914dc64ba2da))
 
-* Merge branch &#39;master&#39; into develop ([`0ae652f`](https://github.com/ELC/pycracks/commit/0ae652f16fd13ad86c0dab791a009974e5471419))
+* fix(cicd): use same report for coveralls ([`96adb89`](https://github.com/ELC/pycracks/commit/96adb89fd0b9676299ac72081141aa74b09b99a6))
+
+* fix(cicd): add title to distinguish between versions ([`db8aac5`](https://github.com/ELC/pycracks/commit/db8aac5970e63f28d38211cfa10a8a5789ca72fe))
+
+* fix(cicd): update comments with matrix support ([`1d34aa7`](https://github.com/ELC/pycracks/commit/1d34aa79d5c95aa42ab052e8cb1d066b1d07543e))
+
+* fix(cicd): always run report upload ([`b703733`](https://github.com/ELC/pycracks/commit/b7037331691f8eb244fcc687b198d0354f408063))
+
+* fix(cicd): update test report for pytest ([`ad5e9f2`](https://github.com/ELC/pycracks/commit/ad5e9f20131484288c32ea3a55622ff1ef4e3f33))
+
+* fix(release): remove debug mode ([`cacf28b`](https://github.com/ELC/pycracks/commit/cacf28b5e0f5ef864a0f3616292dd8680c0bd667))
+
+* fix(release): use debug mode in coveralls ([`cbc94bd`](https://github.com/ELC/pycracks/commit/cbc94bdbafc6f78e77006cf586d768fdfc4aeb61))
+
+* fix(cicd): finish explicit flags ([`c956afe`](https://github.com/ELC/pycracks/commit/c956afec7507df8c8416f2de82327fd117a55185))
+
+* fix(release): ignore merge commits ([`c4d5a2f`](https://github.com/ELC/pycracks/commit/c4d5a2f430baec4a4e0efae8e7fd313bce5bce0d))
 
 
 ## v0.11.0 (2023-11-12)
@@ -107,10 +123,6 @@ Develop ([`c162da7`](https://github.com/ELC/pycracks/commit/c162da79bc227d8a37b2
 
 * feat: add pre-commit check to CICD ([`3c38ac6`](https://github.com/ELC/pycracks/commit/3c38ac687b20c89da6c1ee2da7399c5459655a70))
 
-### Unknown
-
-* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`bdc8c55`](https://github.com/ELC/pycracks/commit/bdc8c55071b2cf727a2d5c243585d3915524418d))
-
 
 ## v0.8.0 (2023-11-07)
 
@@ -132,12 +144,6 @@ Develop ([`c162da7`](https://github.com/ELC/pycracks/commit/c162da79bc227d8a37b2
 * fix(cicd): remove required python version in pipfile ([`c324399`](https://github.com/ELC/pycracks/commit/c324399f405decc0d2029dee75bed50359ef8217))
 
 * fix(test): make python version 3.8+ ([`3c9e1fa`](https://github.com/ELC/pycracks/commit/3c9e1fa14265bcbcf26e8b5f5aa87f4d081225af))
-
-### Unknown
-
-* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`b0035bb`](https://github.com/ELC/pycracks/commit/b0035bbbda2679de13221ab87b0f8ba2a780f2a4))
-
-* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`42adb0d`](https://github.com/ELC/pycracks/commit/42adb0db76197000faf0ef4667533ac9c1a8f479))
 
 
 ## v0.6.0 (2023-11-07)

@@ -100,23 +100,19 @@ jobs:
           pip install pipenv==2023.2.4
           pipenv install --dev --deploy
 
-
       - name: Run Tests
         run: |
-          pipenv run test > pytest-coverage.txt
-
-      - name: Test Report
-        uses: MishaKav/pytest-coverage-comment@v1.1.48
-        if: success() || failure()
-        with:
-          pytest-coverage-path: pytest-coverage.txt
-          junitxml-path: coverage.xml
+          pipenv run test
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
+        if: always()
         with:
-          flag-name: py${{ matrix.python-version }}
+          flag-name: "${{ matrix.version }}"
           parallel: true
+          file: "coverage-report.xml"
+          format: "cobertura"
+          measure: true
 
   test-finish:
     needs: test
