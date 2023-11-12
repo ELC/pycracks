@@ -100,7 +100,6 @@ jobs:
           pip install pipenv==2023.2.4
           pipenv install --dev --deploy
 
-
       - name: Run Tests
         run: |
           pipenv run test > pytest-coverage.txt
