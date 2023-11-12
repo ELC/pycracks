@@ -20,12 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          fetch-tags: true
           persist-credentials: false
 
       - name: Set Up Git Identity
         run: |
+          git fetch -v -v -v --all --unshallow
+          git switch ${{ github.GITHUB_REF_NAME }} || git switch ${{ github.GITHUB_HEAD_REF }}
           git config --global user.email "$(git log -1 --pretty=format:'%ae' | xargs)"
           git config --global user.name "${{ github.actor }}"
           git remote set-url origin "https://${{ github.actor }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }}"
