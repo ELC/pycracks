@@ -120,6 +120,8 @@ jobs:
           flag-name: "${{ matrix.version }}"
           parallel: true
           file: "coverage-report.xml"
+          format: "cobertura"
+          measure: true
 
   test-finish:
     needs: test
