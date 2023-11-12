@@ -2,6 +2,13 @@
 
 
 
+## v0.14.2 (2023-11-12)
+
+### Fix
+
+* fix: update license in PyPI ([`0c87808`](https://github.com/ELC/pycracks/commit/0c87808165ad05c58efd9819d938e69dd0477ad1))
+
+
 ## v0.14.1 (2023-11-12)
 
 ### Fix
