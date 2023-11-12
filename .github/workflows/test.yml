@@ -105,7 +105,7 @@ jobs:
           git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
           pipx install .
-          pycracks -vv -t $(semantic-release -v version --print)
+          pycracks -vv -t "$(semantic-release -v version --print)"
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2

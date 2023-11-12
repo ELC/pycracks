@@ -17,7 +17,7 @@ app = typer.Typer(add_completion=False)
 def main(
     test_command: Annotated[
         str, typer.Option("--test-command", "-c", help="Command that runs the test")
-    ] = "python -m pipenv run test",
+    ] = "pipenv run test",
     paths: Annotated[
         Tuple[str], typer.Option("--path", "-p", help="Paths to checkout")
     ] = ("tests",),
