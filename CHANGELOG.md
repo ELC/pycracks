@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix: use official coveralls action ([`371b582`](https://github.com/ELC/pycracks/commit/371b582212467270f40b246ac5726199d87ea7df))
+
 * fix(cicd): test alternative test reporter ([`85c710e`](https://github.com/ELC/pycracks/commit/85c710ecb96c0ff6d78748eb33bb0626cedbea60))
 
 * fix(cid): modify permisisons ([`441332b`](https://github.com/ELC/pycracks/commit/441332b7b66ee0cd93437342c7d86fcfdc7db777))
