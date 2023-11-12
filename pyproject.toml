@@ -11,6 +11,21 @@ description = "Detect Breaking Changes with Python."
 license = { text = "MIT" }
 requires-python = ">=3.8"
 dynamic = ['version', 'readme']
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Framework :: Hypothesis",
+  "Framework :: Pytest",
+  "Environment :: Console",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Software Development :: Version Control :: Git",
+  "Typing :: Typed"
+]
 
 [project.urls]
 homepage = "https://github.com/elc/pycracks"
@@ -18,12 +33,15 @@ documentation = "https://github.com/elc/pycracks"
 repository = "https://github.com/elc/pycracks"
 changelog = "https://github.com/ELC/pycracks/blob/master/CHANGELOG.md"
 
+[project.scripts]
+pycracks = "pycracks.__main__:app"
+
+[tool.setuptools.package-data]
+pycracks = ["py.typed", "*.md"]
+
 [tool.setuptools.dynamic]
 version = {attr = "pycracks.__version__"}
 readme = {file = ["README.md"]}
-
-[project.scripts]
-pycracks = "pycracks.__main__:app"
 
 [tool.setuptools-pipfile]
 
