@@ -116,12 +116,11 @@ jobs:
           junitxml-path: coverage.xml
 
       - name: Upload coverage to Coveralls
-        uses: AndreMiras/coveralls-python-action@develop
+        uses: coverallsapp/github-action@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel: true
           flag-name: py${{ matrix.python-version }}
-          debug: true
+          parallel: true
+          files: coverage.xml coverage-report.xml
 
   deploy:
     runs-on: ubuntu-latest
