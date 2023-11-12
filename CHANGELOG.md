@@ -2,6 +2,13 @@
 
 
 
+## v0.14.1 (2023-11-12)
+
+### Fix
+
+* fix: combine permission levels ([`e05bd5d`](https://github.com/ELC/pycracks/commit/e05bd5d72005d0c6389826738ae8604792aa1115))
+
+
 ## v0.14.0 (2023-11-12)
 
 ### Feature
