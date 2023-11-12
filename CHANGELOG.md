@@ -4,9 +4,9 @@
 
 ## v0.12.0 (2023-11-12)
 
-### Unknown
+### Fix
 
-* Merge branch &#39;master&#39; into develop ([`0ae652f`](https://github.com/ELC/pycracks/commit/0ae652f16fd13ad86c0dab791a009974e5471419))
+* fix(release): ignore merge commits ([`c4d5a2f`](https://github.com/ELC/pycracks/commit/c4d5a2f430baec4a4e0efae8e7fd313bce5bce0d))
 
 
 ## v0.11.0 (2023-11-12)
@@ -103,10 +103,6 @@
 
 * feat: add pre-commit check to CICD ([`3c38ac6`](https://github.com/ELC/pycracks/commit/3c38ac687b20c89da6c1ee2da7399c5459655a70))
 
-### Unknown
-
-* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`bdc8c55`](https://github.com/ELC/pycracks/commit/bdc8c55071b2cf727a2d5c243585d3915524418d))
-
 
 ## v0.8.0 (2023-11-07)
 
@@ -128,12 +124,6 @@
 * fix(cicd): remove required python version in pipfile ([`c324399`](https://github.com/ELC/pycracks/commit/c324399f405decc0d2029dee75bed50359ef8217))
 
 * fix(test): make python version 3.8+ ([`3c9e1fa`](https://github.com/ELC/pycracks/commit/3c9e1fa14265bcbcf26e8b5f5aa87f4d081225af))
-
-### Unknown
-
-* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`b0035bb`](https://github.com/ELC/pycracks/commit/b0035bbbda2679de13221ab87b0f8ba2a780f2a4))
-
-* Merge branch &#39;master&#39; of https://github.com/ELC/pycracks ([`42adb0d`](https://github.com/ELC/pycracks/commit/42adb0db76197000faf0ef4667533ac9c1a8f479))
 
 
 ## v0.6.0 (2023-11-07)
