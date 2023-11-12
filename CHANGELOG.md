@@ -2,6 +2,13 @@
 
 
 
+## v0.12.1 (2023-11-12)
+
+### Fix
+
+* fix(cicd): deploy only after test status is updated ([`25a079b`](https://github.com/ELC/pycracks/commit/25a079b6c067aa6b6e9f62b431bb11c45b10cf4d))
+
+
 ## v0.12.0 (2023-11-12)
 
 ### Fix
