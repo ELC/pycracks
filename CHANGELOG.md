@@ -10,6 +10,10 @@
 
 ### Fix
 
+* fix(cid): modify permisisons ([`441332b`](https://github.com/ELC/pycracks/commit/441332b7b66ee0cd93437342c7d86fcfdc7db777))
+
+* fix(cicd): only run deploy on master ([`9415da9`](https://github.com/ELC/pycracks/commit/9415da9f50abb4e39a2595eef81f557d0828c3ee))
+
 * fix(cicd): use test reporter with JUnit ([`4122c1f`](https://github.com/ELC/pycracks/commit/4122c1f485aade954625df7d4d9682e7c486c202))
 
 * fix(cicd): cancell previous run on new commits ([`4776e40`](https://github.com/ELC/pycracks/commit/4776e40b559cfbcc5b452b1bc0e183fd1d3cd7fd))
