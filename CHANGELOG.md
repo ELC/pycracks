@@ -8,6 +8,10 @@
 
 * feat(cicd): add test report ([`2c77430`](https://github.com/ELC/pycracks/commit/2c77430f4db3c02fd212fa1191254825b3b2e159))
 
+### Fix
+
+* fix(cicd): use different coverage reporter ([`dff26e4`](https://github.com/ELC/pycracks/commit/dff26e44cb026c941214f52cfe9232a3f1a94e45))
+
 
 ## v0.10.0 (2023-11-11)
 
