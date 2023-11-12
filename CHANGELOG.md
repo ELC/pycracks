@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix(cicd): use global write permissions for pull-requests ([`94b92dc`](https://github.com/ELC/pycracks/commit/94b92dcca5bf917fd5d134e691323cdaf0c7560c))
+
 * fix(cicd): give write-all permissions ([`1c4d175`](https://github.com/ELC/pycracks/commit/1c4d175791f2c7a1bc89c7a9a75eb0c50dcda659))
 
 * fix(cicd): add pull-request write permision ([`fae952c`](https://github.com/ELC/pycracks/commit/fae952c33b47895b6ecd05246b258df3547bc1c4))
