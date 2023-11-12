@@ -3,7 +3,9 @@ name: Test
 on:
   workflow_run:
     workflows: Check
-    branches: master
+    branches:
+      - "master"
+      - "develop"
     types: completed
 
 permissions:
