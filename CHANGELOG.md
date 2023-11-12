@@ -2,6 +2,13 @@
 
 
 
+## v0.11.0 (2023-11-12)
+
+### Feature
+
+* feat(cicd): add test report ([`2c77430`](https://github.com/ELC/pycracks/commit/2c77430f4db3c02fd212fa1191254825b3b2e159))
+
+
 ## v0.10.0 (2023-11-11)
 
 ### Feature
