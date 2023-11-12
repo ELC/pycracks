@@ -6,6 +6,10 @@
 
 ### Fix
 
+* fix(cicd): update comments with matrix support ([`1d34aa7`](https://github.com/ELC/pycracks/commit/1d34aa79d5c95aa42ab052e8cb1d066b1d07543e))
+
+* fix(cicd): always run report upload ([`b703733`](https://github.com/ELC/pycracks/commit/b7037331691f8eb244fcc687b198d0354f408063))
+
 * fix(cicd): update test report for pytest ([`ad5e9f2`](https://github.com/ELC/pycracks/commit/ad5e9f20131484288c32ea3a55622ff1ef4e3f33))
 
 * fix(release): remove debug mode ([`cacf28b`](https://github.com/ELC/pycracks/commit/cacf28b5e0f5ef864a0f3616292dd8680c0bd667))
