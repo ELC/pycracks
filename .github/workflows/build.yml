@@ -108,6 +108,7 @@ jobs:
         uses: MishaKav/pytest-coverage-comment@v1.1.48
         if: always()
         with:
+          title: Coverage for Python ${{ matrix.version }}
           pytest-xml-coverage-path: coverage-report.xml
           junitxml-path: coverage.xml
           unique-id-for-comment: ${{ matrix.version }}
