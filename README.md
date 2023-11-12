@@ -15,4 +15,5 @@
 ## F.A.Q.
 
 ## License
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FELC%2Fpycracks.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FELC%2Fpycracks)
