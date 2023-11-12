@@ -6,6 +6,10 @@
 
 ### Unknown
 
+* Merge pull request #6 from ELC/develop
+
+Develop ([`c162da7`](https://github.com/ELC/pycracks/commit/c162da79bc227d8a37b22dedc82dbb82e03ca32f))
+
 * Merge branch &#39;master&#39; into develop ([`0ae652f`](https://github.com/ELC/pycracks/commit/0ae652f16fd13ad86c0dab791a009974e5471419))
 
 
