@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix(cicd): give write-all permissions ([`1c4d175`](https://github.com/ELC/pycracks/commit/1c4d175791f2c7a1bc89c7a9a75eb0c50dcda659))
+
 * fix(cicd): add pull-request write permision ([`fae952c`](https://github.com/ELC/pycracks/commit/fae952c33b47895b6ecd05246b258df3547bc1c4))
 
 * fix(cicd): use proper static variable names ([`ca7b6fa`](https://github.com/ELC/pycracks/commit/ca7b6fa6c28bf96bbab4474724d7a6f2bcc353cc))
