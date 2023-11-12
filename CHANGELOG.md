@@ -12,6 +12,8 @@
 
 ### Fix
 
+* fix(cicd): add test-finish step ([`0e06d21`](https://github.com/ELC/pycracks/commit/0e06d219280ea572e97871372d194c6887e3aed5))
+
 * fix(cicd): remove manual file specification in coveralls ([`2c7d4f9`](https://github.com/ELC/pycracks/commit/2c7d4f99738f4558d11ef61480c9935cfa10a57c))
 
 * fix: use official coveralls action ([`371b582`](https://github.com/ELC/pycracks/commit/371b582212467270f40b246ac5726199d87ea7df))
