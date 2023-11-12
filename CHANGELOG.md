@@ -12,6 +12,8 @@
 
 ### Fix
 
+* fix(cicd): add permission to generate token ([`67ea2d6`](https://github.com/ELC/pycracks/commit/67ea2d6ee44ffec089ba9b5e9903f7ff0e2a4b47))
+
 * fix(cicd): tag last commit that is not a merge ([`3decf27`](https://github.com/ELC/pycracks/commit/3decf2779c4ea3fcf5a984e30d4c5ae6ee83f7a1))
 
 * fix(cicd): remove redudant trigger ([`00e3667`](https://github.com/ELC/pycracks/commit/00e3667b2212d5ad38851513381e3d4b9f8733e9))
