@@ -12,6 +12,8 @@
 
 ### Fix
 
+* fix(cicd): remove redudant trigger ([`00e3667`](https://github.com/ELC/pycracks/commit/00e3667b2212d5ad38851513381e3d4b9f8733e9))
+
 * fix(cicd): fix branch triggers ([`0a7ff99`](https://github.com/ELC/pycracks/commit/0a7ff992fe435c6b1dce8d84e820e28e6f8d893f))
 
 * fix: update license information for PyPI ([`e356913`](https://github.com/ELC/pycracks/commit/e3569138ca3b910e7773b68ad8724e81f37c6d31))
