@@ -10,6 +10,10 @@
 
 ### Fix
 
+* fix(cicd): check breaking changes in matrix ([`c0e13b8`](https://github.com/ELC/pycracks/commit/c0e13b8761aef174f8e1bdc5086999c9ed036400))
+
+* fix(cicd): run tests after checks ([`b90249d`](https://github.com/ELC/pycracks/commit/b90249d9f617a4cf0f7efe5584200585801abb46))
+
 * fix(cicd): tag without a message ([`380361c`](https://github.com/ELC/pycracks/commit/380361c8e188e7dec381d67ee5e765e9fe6902d2))
 
 
