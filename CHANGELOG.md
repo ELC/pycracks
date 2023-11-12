@@ -6,6 +6,8 @@
 
 ### Fix
 
+* fix(cicd): remove custom action for test reports ([`b82e79b`](https://github.com/ELC/pycracks/commit/b82e79b9912a292d8c1fcef2853c096808601a24))
+
 * fix(cicd): make format explicit ([`af45e2a`](https://github.com/ELC/pycracks/commit/af45e2ab2b08dcb72e5aafa1c674914dc64ba2da))
 
 * fix(cicd): use same report for coveralls ([`96adb89`](https://github.com/ELC/pycracks/commit/96adb89fd0b9676299ac72081141aa74b09b99a6))
