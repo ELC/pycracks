@@ -6,6 +6,8 @@
 
 ### Fix
 
+* fix(cicd): use same report for coveralls ([`96adb89`](https://github.com/ELC/pycracks/commit/96adb89fd0b9676299ac72081141aa74b09b99a6))
+
 * fix(cicd): add title to distinguish between versions ([`db8aac5`](https://github.com/ELC/pycracks/commit/db8aac5970e63f28d38211cfa10a8a5789ca72fe))
 
 * fix(cicd): update comments with matrix support ([`1d34aa7`](https://github.com/ELC/pycracks/commit/1d34aa79d5c95aa42ab052e8cb1d066b1d07543e))
