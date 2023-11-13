@@ -9,6 +9,8 @@ on:
     branches: master
     types: completed
 
+permissions: read-all
+
 jobs:
   opensff-analysis:
     name: OpenSSF Scorecard analysis
@@ -16,8 +18,6 @@ jobs:
     permissions:
       security-events: write
       id-token: write
-      actions: read
-      contents: read
 
     steps:
       - name: "Checkout code"
@@ -47,7 +47,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
-      id-token: write
       actions: read
       contents: read
 
