@@ -2,6 +2,13 @@
 
 
 
+## v0.15.0 (2023-11-13)
+
+### Feature
+
+* feat(cicd): add security checks ([`453718e`](https://github.com/ELC/pycracks/commit/453718e3b76fe307e66eb600a216b96909b13bc6))
+
+
 ## v0.14.3 (2023-11-12)
 
 ### Fix
