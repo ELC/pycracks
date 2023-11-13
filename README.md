@@ -23,6 +23,13 @@
 ![Static Badge](https://img.shields.io/badge/Pre--Commit-%E2%9C%93-brightgreen?style=for-the-badge&logo=precommit)
 ![Static Badge](https://img.shields.io/badge/Format-Black-brightgreen?style=for-the-badge&color=black)
 
+## Security
+
+![OSSF-Scorecard Score](https://img.shields.io/ossf-scorecard/github.com/ELC/pycracks?style=for-the-badge&label=OpenSSF%20Score)
+
+
+
+
 ## Usage
 
 ## Installation
