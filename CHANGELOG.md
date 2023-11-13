@@ -2,6 +2,13 @@
 
 
 
+## v0.17.0 (2023-11-13)
+
+### Feature
+
+* feat(cicd): divide security scans in separate jobs ([`f1fb1a8`](https://github.com/ELC/pycracks/commit/f1fb1a88ffa1809311eb933125b5a5f6bc7eb4ce))
+
+
 ## v0.16.1 (2023-11-13)
 
 ### Fix
