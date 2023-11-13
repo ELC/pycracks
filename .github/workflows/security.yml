@@ -9,15 +9,15 @@ on:
     branches: master
     types: completed
 
+permissions: read-all
+
 jobs:
   opensff-analysis:
-    name: Scorecard analysis
+    name: OpenSSF Scorecard analysis
     runs-on: ubuntu-latest
     permissions:
       security-events: write
       id-token: write
-      actions: read
-      contents: read
 
     steps:
       - name: "Checkout code"
@@ -43,11 +43,10 @@ jobs:
           sarif_file: results.sarif
 
   codeql-analysis:
-    name: Scorecard analysis
+    name: CodeQL analysis
     runs-on: ubuntu-latest
     permissions:
       security-events: write
-      id-token: write
       actions: read
       contents: read
 
