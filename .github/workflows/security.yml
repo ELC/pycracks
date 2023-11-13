@@ -21,7 +21,7 @@ jobs:
       - name: "Checkout code"
         uses: actions/checkout@v3
 
-      - name: "Run analysis"
+      - name: "Run OpenSSF analysis"
         uses: ossf/scorecard-action@v2.3.1
         with:
           results_file: results.sarif
@@ -39,3 +39,13 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2.22.5
         with:
           sarif_file: results.sarif
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: "python"
+
+      - name: "Run CodeQL analysis"
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:python"

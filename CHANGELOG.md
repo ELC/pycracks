@@ -2,6 +2,13 @@
 
 
 
+## v0.16.0 (2023-11-13)
+
+### Feature
+
+* feat(cicd): add CodeQL to security scans ([`4cb96a3`](https://github.com/ELC/pycracks/commit/4cb96a33ca94951f957e0696f28a33e81ea5d14c))
+
+
 ## v0.15.0 (2023-11-13)
 
 ### Feature
