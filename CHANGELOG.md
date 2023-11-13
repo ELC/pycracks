@@ -2,6 +2,13 @@
 
 
 
+## v0.16.1 (2023-11-13)
+
+### Fix
+
+* fix(cicd): update permissions for security scans ([`f1821c2`](https://github.com/ELC/pycracks/commit/f1821c2e17342b7b6a373547d18d00317fa60371))
+
+
 ## v0.16.0 (2023-11-13)
 
 ### Feature
