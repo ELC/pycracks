@@ -2,6 +2,13 @@
 
 
 
+## v0.17.1 (2023-11-13)
+
+### Fix
+
+* fix(cicd): use minimum permissions ([`28c41c4`](https://github.com/ELC/pycracks/commit/28c41c4fdac49959da735dc89fc76b187952dfad))
+
+
 ## v0.17.0 (2023-11-13)
 
 ### Feature
