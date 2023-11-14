@@ -2,6 +2,13 @@
 
 
 
+## v0.17.2 (2023-11-14)
+
+### Fix
+
+* fix: pre-commit autoupdate ([`48a2536`](https://github.com/ELC/pycracks/commit/48a2536f9e156f1896eae807ddfe2666190fc991))
+
+
 ## v0.17.1 (2023-11-13)
 
 ### Fix
