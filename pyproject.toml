@@ -1,30 +1,34 @@
 [build-system]
-requires = ["setuptools ~= 68.2.0", "wheel ~= 0.41.2", "setuptools-pipfile ~= 0.7.0"]
+requires = [
+    "setuptools ~= 68.2.0",
+    "wheel ~= 0.41.2",
+    "setuptools-pipfile ~= 0.7.0",
+]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pycracks"
 authors = [
-    {name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com"},
+    { name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com" },
 ]
 description = "Detect Breaking Changes with Python."
 license = { text = "MIT" }
 requires-python = ">=3.8"
 dynamic = ['version', 'readme']
 classifiers = [
-  "Development Status :: 4 - Beta",
-  "Programming Language :: Python",
-  "License :: OSI Approved :: MIT License",
-  "Intended Audience :: Developers",
-  "Framework :: Hypothesis",
-  "Framework :: Pytest",
-  "Environment :: Console",
-  "Natural Language :: English",
-  "Operating System :: OS Independent",
-  "Topic :: Software Development :: Quality Assurance",
-  "Topic :: Software Development :: Testing",
-  "Topic :: Software Development :: Version Control :: Git",
-  "Typing :: Typed"
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Framework :: Hypothesis",
+    "Framework :: Pytest",
+    "Environment :: Console",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Typing :: Typed",
 ]
 
 [project.urls]
@@ -36,14 +40,26 @@ changelog = "https://github.com/ELC/pycracks/blob/master/CHANGELOG.md"
 [project.scripts]
 pycracks = "pycracks.__main__:app"
 
+#########################
+# Setuptools
+#########################
+
 [tool.setuptools.package-data]
 pycracks = ["py.typed", "*.md"]
 
 [tool.setuptools.dynamic]
-version = {attr = "pycracks.__version__"}
-readme = {file = ["README.md"]}
+version = { attr = "pycracks.__version__" }
+readme = { file = ["README.md"] }
+
+#########################
+# Setuptools-Pipfile
+#########################
 
 [tool.setuptools-pipfile]
+
+#########################
+# Semantic Release
+#########################
 
 [tool.semantic_release.branches.main]
 match = "(master|develop)"
@@ -51,21 +67,285 @@ match = "(master|develop)"
 [tool.semantic_release]
 commit_message = "chore(release): bump version and update changelog [skip ci]"
 version_source = "tag"
-version_variables = [
-    "pycracks/__init__.py:__version__",
-]
+version_variables = ["pycracks/__init__.py:__version__"]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
-exclude_commit_patterns = [
-    "chore*",
-    "Merge*"
-]
+exclude_commit_patterns = ["chore*", "Merge*"]
 
 [tool.semantic_release.commit_parser_options]
 allowed_tags = ["chore", "feat", "fix"]
 minor_tags = ["feat"]
 patch_tags = ["fix"]
 
+#########################
+# Coverage
+#########################
+
 [tool.coverage.run]
 relative_files = true
+
+#########################
+# MyPy
+#########################
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+
+#########################
+# RUFF
+#########################
+
+[tool.ruff]
+fix = true
+preview = true
+
+[tool.ruff.lint]
+extend-select = [
+    #   "D",   # pydocstyle
+    # "FBT",   # flake8-boolean-trap
+    # "COM",   # flake8-commas
+    "E",    # pycodestyle
+    "UP",   # pyupgrade
+    "BLE",  # flake8-blind-except
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "C4",   # flake8-comprehensions
+    "ICN",  # flake8-import-conventions
+    "PIE",  # flake8-pie
+    "RSE",  # flake8-return
+    "SIM",  # flake8-simplify
+    "ANN",  # flake8-annotations
+    "ARG",  # flake8-unused-arguments
+    "G",    # flake8-logging-format
+    "ISC",  # flake8-implicit-str-concat
+    "T20",  # flake8-print
+    "EM",   # flake8-errmsg
+    "SLF",  # flake8-self
+    "PT",   # flake8-pytest-style
+    "RET",  # flake8-return
+    "TID",  # flake8-tidy-imports
+    "PTH",  # flake8-use-pathlib
+    "LOG",  # flake8-logging
+    "TD",   # flake8-todos
+    "FIX",  # flake8-fixme
+    "TRY",  # tryceratops
+    "I",    # isort
+    "ERA",  # erradicate
+    "PERF", # Perflint
+    "FURB", # refurb
+    "RUF",  # ruff
+]
+
+[tool.ruff.format]
+# Set Ruff to imitate Black
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+#########################
+# Pylint
+#########################
+
+[tool.pylint.main]
+fail-on = ["I"]
+fail-under = 10
+ignore = ["third_party"]
+ignore-patterns = [
+    "object_detection_grpc_client.py",
+    "prediction_pb2.py",
+    "prediction_pb2_grpc.py",
+]
+jobs = 4
+limit-inference-results = 100
+load-plugins = [
+    "pylint.extensions.bad_builtin",
+    "pylint.extensions.code_style",
+    "pylint.extensions.comparison_placement",
+    "pylint.extensions.consider_refactoring_into_while_condition",
+    "pylint.extensions.docparams",
+    "pylint.extensions.dunder",
+    "pylint.extensions.eq_without_hash",
+    "pylint.extensions.for_any_all",
+    "pylint.extensions.mccabe",
+    "pylint.extensions.no_self_use",
+    "pylint.extensions.overlapping_exceptions",
+    "pylint.extensions.private_import",
+    "pylint.extensions.redefined_loop_name",
+    "pylint.extensions.set_membership",
+]
+py-version = "3.10"
+suggestion-mode = true
+
+
+[tool.pylint.basic]
+argument-naming-style = "snake_case"
+argument-rgx = "[a-z_][a-z0-9_]{2,30}$"
+attr-naming-style = "snake_case"
+attr-rgx = "[a-z_][a-z0-9_]{2,30}$"
+bad-names = ["foo", "bar", "baz", "toto", "tutu", "tata"]
+
+class-attribute-naming-style = "any"
+class-attribute-rgx = "([A-Za-z_][A-Za-z0-9_]{2,30}|(__.*__))$"
+class-const-naming-style = "UPPER_CASE"
+class-naming-style = "PascalCase"
+class-rgx = "[A-Z_][a-zA-Z0-9]+$"
+const-naming-style = "UPPER_CASE"
+const-rgx = "(([A-Z_][A-Z0-9_]*)|(__.*__))$"
+docstring-min-length = -1
+function-naming-style = "snake_case"
+function-rgx = "[a-z_][a-z0-9_]{2,30}$"
+good-names = ["i", "j", "k", "ex", "Run", "_"]
+include-naming-hint = true
+
+inlinevar-naming-style = "any"
+inlinevar-rgx = "[A-Za-z_][A-Za-z0-9_]*$"
+method-naming-style = "snake_case"
+method-rgx = "[a-z_][a-z0-9_]{2,30}$"
+module-naming-style = "snake_case"
+module-rgx = "(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$"
+no-docstring-rgx = "^_"
+property-classes = ["abc.abstractproperty"]
+variable-naming-style = "snake_case"
+variable-rgx = "[a-z_][a-z0-9_]{2,30}$"
+
+[tool.pylint.classes]
+defining-attr-methods = ["__init__", "__new__", "setUp"]
+exclude-protected = ["_asdict", "_fields", "_replace", "_source", "_make"]
+valid-classmethod-first-arg = ["cls"]
+valid-metaclass-classmethod-first-arg = ["mcs"]
+
+[tool.pylint.deprecated_builtins]
+bad-functions = ["map", "filter"]
+
+[tool.pylint.design]
+max-args = 7
+max-attributes = 7
+max-bool-expr = 5
+max-branches = 12
+max-complexity = 10
+max-locals = 15
+max-parents = 7
+max-public-methods = 20
+max-returns = 6
+max-statements = 50
+
+
+[tool.pylint.exceptions]
+overgeneral-exceptions = ["'builtins.Exception'"]
+
+[tool.pylint.format]
+indent-after-paren = 4
+indent-string = "    "
+max-line-length = 120
+max-module-lines = 400
+
+
+[tool.pylint.imports]
+deprecated-modules = ["regsub", "TERMIOS", "Bastion", "rexec"]
+known-third-party = ["enchant"]
+
+
+[tool.pylint.logging]
+logging-format-style = "old"
+
+logging-modules = ["logging"]
+
+[tool.pylint."messages control"]
+confidence = [
+    "HIGH",
+    "CONTROL_FLOW",
+    "INFERENCE",
+    "INFERENCE_FAILURE",
+    "UNDEFINED",
+]
+
+disable = [
+    "redefined-outer-name",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "import-error",
+    "invalid-name",
+    "logging-fstring-interpolation",
+    "consider-using-assignment-expr",
+    "subprocess-run-check",
+    "unused-import",                  # Check and fix by Ruff
+]
+
+enable = [
+    "bad-inline-option",
+    "file-ignored",
+    "useless-suppression",
+    "deprecated-pragma",
+    "use-symbolic-message-instead",
+]
+
+[tool.pylint.method_args]
+timeout-methods = [
+    "requests.api.delete",
+    "requests.api.get",
+    "requests.api.head",
+    "requests.api.options",
+    "requests.api.patch",
+    "requests.api.post",
+    "requests.api.put",
+    "requests.api.request",
+]
+
+[tool.pylint.miscellaneous]
+notes = ["FIXME", "XXX", "TODO"]
+
+
+[tool.pylint.parameter_documentation]
+accept-no-param-doc = true
+accept-no-raise-doc = true
+accept-no-return-doc = true
+accept-no-yields-doc = true
+default-docstring-type = "default"
+
+[tool.pylint.refactoring]
+max-nested-blocks = 5
+never-returning-functions = ["sys.exit", "argparse.parse_error"]
+
+[tool.pylint.reports]
+evaluation = "10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)"
+score = true
+
+[tool.pylint.similarities]
+ignore-comments = true
+ignore-docstrings = true
+ignore-signatures = true
+min-similarity-lines = 4
+
+[tool.pylint.spelling]
+max-spelling-suggestions = 4
+spelling-ignore-comment-directives = "fmt: on,fmt: off,noqa:,noqa,nosec,isort:skip,mypy:"
+
+[tool.pylint.string]
+
+check-str-concat-over-line-jumps = true
+
+[tool.pylint.typecheck]
+contextmanager-decorators = ["contextlib.contextmanager"]
+ignore-none = true
+ignore-on-opaque-inference = true
+ignored-checks-for-mixins = [
+    "no-member",
+    "not-async-context-manager",
+    "not-context-manager",
+    "attribute-defined-outside-init",
+]
+ignored-classes = ["optparse.Values", "thread._local", "_thread._local"]
+missing-member-hint = true
+missing-member-hint-distance = 1
+missing-member-max-choices = 1
+mixin-class-rgx = ".*[Mm]ixin"
+
+[tool.pylint.variables]
+allow-global-unused-variables = true
+callbacks = ["cb_", "_cb"]
+dummy-variables-rgx = "(_+[a-zA-Z0-9]*?$)|dummy"
+ignored-argument-names = "_.*"
+redefining-builtins-modules = ["six.moves", "future.builtins"]
