@@ -19,7 +19,7 @@
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/ELC/pycracks?style=for-the-badge&logo=codeclimate)](https://codeclimate.com/github/ELC/pycracks)
 [![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/ELC/pycracks?style=for-the-badge&logo=codeclimate)](https://codeclimate.com/github/ELC/pycracks)
 
-![Conventional Commits](https://img.shields.io/badge/Conventional_Commits-%E2%9C%93-brightgreen?style=for-the-badge&logo=conventionalcommits)
+![Conventional Commits](https://img.shields.io/badge/semantic--release-conventional-steelblue?logo=semantic-release&style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Pre--Commit-%E2%9C%93-brightgreen?style=for-the-badge&logo=precommit)
 ![Static Badge](https://img.shields.io/badge/Format-Black-brightgreen?style=for-the-badge&color=black)
 
