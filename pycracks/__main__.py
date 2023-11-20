@@ -36,7 +36,7 @@ def main(
 ) -> None:
     if version:
         typer.echo(__version__)
-        raise typer.Exit()
+        raise typer.Exit
 
     if verbose:
         logging.basicConfig(level=logging.INFO)
@@ -54,7 +54,7 @@ def main(
         raise typer.Exit(code=1)
 
     logger.info("No incompatibilities between changes and version")
-    raise typer.Exit()
+    raise typer.Exit
 
 
 if __name__ == "__main__":

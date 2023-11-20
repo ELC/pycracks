@@ -38,19 +38,19 @@ def is_breaking_change_expected(
     return major_increased or test_succeeded
 
 
-def get_repo(path: Path = Path(".")) -> Repo:
+def get_repo(path: Path = Path()) -> Repo:
     try:
         return Repo(path)
     except git.exc.InvalidGitRepositoryError as exception:
-        raise ValueError("repo not found") from exception
+        error_message = "repo not found"
+        raise ValueError(error_message) from exception
 
 
 def run_test_command(test_command: str) -> bool:
     command = test_command.split(" ")
     logger.info(f"Running command {command}")
     completed_proccess = subprocess.run(command)
-    command_successful = completed_proccess.returncode == 0
-    return command_successful
+    return completed_proccess.returncode == 0
 
 
 def fetch_tags(repo: Repo) -> None:

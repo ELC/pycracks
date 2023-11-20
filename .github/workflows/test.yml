@@ -47,6 +47,27 @@ jobs:
         run: |
           pip install pipx==1.2.1
 
+      - name: Update Pre-Commits
+        run: |
+          pipx install pre-commit==3.5.0
+          pre-commit autoupdate
+          differences=$(git diff | xargs)
+
+          if [ -z "$differences" ]; then
+            echo "No changes needed"
+            exit 0
+          fi
+
+          echo "::error::The pre-commit hooks are outdated"
+          echo "$differences"
+
+          git add --all
+          git commit -m "chore(test): update versions of pre-commit hooks"
+          git push
+
+          sleep 30
+          exit 1
+
       - name: Update Version and Changelog
         run: |
           pipx install python-semantic-release==8.3.0
@@ -89,11 +110,18 @@ jobs:
         with:
           python-version: "${{ matrix.version }}"
 
-      - name: Install dependencies
+      - name: Install Global Dependencies
         run: |
           pip install pipx==1.2.1
+
+      - name: Check Linting and Format
+        run: |
+          pip install pre-commit==3.5.0
+          pre-commit run --all-files
+
+      - name: Install Project Dependencies
+        run: |
           pipx install pipenv==2023.2.4
-          pipx install python-semantic-release==8.3.0
           pipenv install --dev --deploy
 
       - name: Run Tests
@@ -105,6 +133,7 @@ jobs:
           git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
           pipx install .
+          pipx install python-semantic-release==8.3.0
           pycracks -vv -t "$(semantic-release -v version --print)"
 
       - name: Upload coverage to Coveralls
