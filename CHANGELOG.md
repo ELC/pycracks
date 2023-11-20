@@ -2,6 +2,19 @@
 
 
 
+## v0.18.0 (2023-11-20)
+
+### Feature
+
+* feat(cicd): add stricter validation for ruff ([`6d56323`](https://github.com/ELC/pycracks/commit/6d563236c2e705b0dbee3aebe073ca01d847aa0c))
+
+* feat: autoupdate pre-commit ([`c43598a`](https://github.com/ELC/pycracks/commit/c43598a787da760934ef948e6c5d774ab1e33120))
+
+### Fix
+
+* fix(cicd): update package name for pre-commit ([`e48d50a`](https://github.com/ELC/pycracks/commit/e48d50ab3f7c515828c1202e32345f61ebb01552))
+
+
 ## v0.17.2 (2023-11-14)
 
 ### Fix
