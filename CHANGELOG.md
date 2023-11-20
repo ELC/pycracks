@@ -2,6 +2,19 @@
 
 
 
+## v0.19.0 (2023-11-20)
+
+### Feature
+
+* feat(cicd): add wheel check in test pipeline ([`19f5a27`](https://github.com/ELC/pycracks/commit/19f5a27903aaaeaa1f96a8863f4a6e7691ec572e))
+
+### Fix
+
+* fix(cicd): improve pylint configuration ([`9074748`](https://github.com/ELC/pycracks/commit/9074748fbc27decc131f7ac41186b7ed820678ac))
+
+* fix(cicd): update pre-commit configuration ([`ec98e6a`](https://github.com/ELC/pycracks/commit/ec98e6a9fc1186510a89f140102539cb546a6d91))
+
+
 ## v0.18.0 (2023-11-20)
 
 ### Feature
