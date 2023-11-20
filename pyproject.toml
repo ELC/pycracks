@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "setuptools ~= 68.2.0",
+    "setuptools ~= 68.2",
     "wheel ~= 0.41.2",
     "setuptools-pipfile ~= 0.7.0",
 ]
@@ -11,7 +11,6 @@ name = "pycracks"
 authors = [
     { name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com" },
 ]
-description = "Detect Breaking Changes with Python."
 license = { text = "MIT" }
 requires-python = ">=3.8"
 dynamic = ['version', 'readme']
@@ -49,7 +48,7 @@ pycracks = ["py.typed", "*.md"]
 
 [tool.setuptools.dynamic]
 version = { attr = "pycracks.__version__" }
-readme = { file = ["README.md"] }
+readme = { file = ["README.md"], content-type = "text/markdown" }
 
 #########################
 # Setuptools-Pipfile
@@ -153,13 +152,9 @@ line-ending = "auto"
 fail-on = ["I"]
 fail-under = 10
 ignore = ["third_party"]
-ignore-patterns = [
-    "object_detection_grpc_client.py",
-    "prediction_pb2.py",
-    "prediction_pb2_grpc.py",
-]
-jobs = 4
-limit-inference-results = 100
+ignore-patterns = []
+jobs = 8
+limit-inference-results = 1000
 load-plugins = [
     "pylint.extensions.bad_builtin",
     "pylint.extensions.code_style",
@@ -169,16 +164,19 @@ load-plugins = [
     "pylint.extensions.dunder",
     "pylint.extensions.eq_without_hash",
     "pylint.extensions.for_any_all",
+    "pylint.extensions.magic_value",
     "pylint.extensions.mccabe",
     "pylint.extensions.no_self_use",
     "pylint.extensions.overlapping_exceptions",
     "pylint.extensions.private_import",
     "pylint.extensions.redefined_loop_name",
+    "pylint.extensions.redefined_variable_type",
     "pylint.extensions.set_membership",
+    "pylint.extensions.typing",
+    "pylint.extensions.while_used",
 ]
-py-version = "3.10"
+py-version = "3.8"
 suggestion-mode = true
-
 
 [tool.pylint.basic]
 argument-naming-style = "snake_case"
@@ -232,7 +230,6 @@ max-public-methods = 20
 max-returns = 6
 max-statements = 50
 
-
 [tool.pylint.exceptions]
 overgeneral-exceptions = ["'builtins.Exception'"]
 
@@ -263,15 +260,14 @@ confidence = [
 ]
 
 disable = [
-    "redefined-outer-name",
     "missing-function-docstring",
     "missing-module-docstring",
-    "import-error",
-    "invalid-name",
-    "logging-fstring-interpolation",
-    "consider-using-assignment-expr",
     "subprocess-run-check",
+    "redefined-outer-name",           # Incompatible with PyTest fixtures
+    "consider-using-assignment-expr", # Too new syntax
     "unused-import",                  # Check and fix by Ruff
+    "unused-variable",                # Too many false positives
+    "invalid-name",                   # Too many false positives
 ]
 
 enable = [
@@ -280,6 +276,8 @@ enable = [
     "useless-suppression",
     "deprecated-pragma",
     "use-symbolic-message-instead",
+    "deprecated-pragma",
+    "file-ignored",
 ]
 
 [tool.pylint.method_args]
@@ -297,6 +295,8 @@ timeout-methods = [
 [tool.pylint.miscellaneous]
 notes = ["FIXME", "XXX", "TODO"]
 
+[tool.pylint.string_constant]
+check-quote-consistency = true
 
 [tool.pylint.parameter_documentation]
 accept-no-param-doc = true
@@ -324,7 +324,6 @@ max-spelling-suggestions = 4
 spelling-ignore-comment-directives = "fmt: on,fmt: off,noqa:,noqa,nosec,isort:skip,mypy:"
 
 [tool.pylint.string]
-
 check-str-concat-over-line-jumps = true
 
 [tool.pylint.typecheck]
@@ -344,7 +343,7 @@ missing-member-max-choices = 1
 mixin-class-rgx = ".*[Mm]ixin"
 
 [tool.pylint.variables]
-allow-global-unused-variables = true
+allow-global-unused-variables = false
 callbacks = ["cb_", "_cb"]
 dummy-variables-rgx = "(_+[a-zA-Z0-9]*?$)|dummy"
 ignored-argument-names = "_.*"
