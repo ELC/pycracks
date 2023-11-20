@@ -21,6 +21,12 @@ repos:
     rev: "v3.0.1"
     hooks:
       - id: pylint
+        additional_dependencies:
+          - packaging
+          - gitpython
+          - pytest
+          - typer
+          - hypothesis
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: "v1.7.0"
