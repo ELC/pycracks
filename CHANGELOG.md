@@ -12,6 +12,8 @@
 
 ### Fix
 
+* fix(security): add top-level permissions ([`b8b5d2b`](https://github.com/ELC/pycracks/commit/b8b5d2b5c5057c18728deb72eea603835255a408))
+
 * fix(security): remove unused permissions ([`081eb56`](https://github.com/ELC/pycracks/commit/081eb56fd895705fb8b2dc8f9f2bdf5a6487ec51))
 
 * fix(security): use job-specific permissions ([`82564e4`](https://github.com/ELC/pycracks/commit/82564e4443f560139e3e10c42cfbb0c8a57f90a8))
