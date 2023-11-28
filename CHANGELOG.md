@@ -6,8 +6,6 @@
 
 ### Feature
 
-* feat(security): add fuzzing ([`66d7457`](https://github.com/ELC/pycracks/commit/66d74577cedecc8bbfcbb9d812d6fdb176f34a95))
-
 * feat(cicd): include dependency-review in test pipeline ([`a0fc718`](https://github.com/ELC/pycracks/commit/a0fc718fef1458e471b7203db9537a701a9d060d))
 
 ### Fix
