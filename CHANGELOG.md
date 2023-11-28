@@ -10,6 +10,8 @@
 
 ### Fix
 
+* fix(cicd): use dependabot on develop ([`f586e01`](https://github.com/ELC/pycracks/commit/f586e01790afe7410ee7c0ff9416323319454279))
+
 * fix(cicd): add pip to dependabot ([`1b6f9f5`](https://github.com/ELC/pycracks/commit/1b6f9f5edf0ac8357725263fdb46263517312280))
 
 ### Unknown
