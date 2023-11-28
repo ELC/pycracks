@@ -222,11 +222,12 @@
         },
         "hypothesis": {
             "hashes": [
-                "sha256:5cfda253e34726c98ab04b9595fca15677ee9f4f6055146aea25a6278d71f6f1",
-                "sha256:781ce6fd35e11ca77ad132a20cebe66fd215f56678f8efd6b87013b14500151b"
+                "sha256:316e06d6f7d5f8ab87bcc7417fca750a2b082ed3ce902b979816b413276680b3",
+                "sha256:a9f61a2bcfc342febcc1d04b80a99e789c57b700f91cbd43bbdb5d651af385cd"
             ],
             "index": "pypi",
-            "version": "==6.88.3"
+            "markers": "python_version >= '3.8'",
+            "version": "==6.91.0"
         },
         "identify": {
             "hashes": [
