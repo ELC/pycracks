@@ -48,7 +48,7 @@ def get_repo(path: Path = Path()) -> Repo:
 
 def run_test_command(test_command: str) -> bool:
     command = test_command.split(" ")
-    logger.info(f"Running command {command}")
+    logger.info("Running command %s", command)
     completed_proccess = subprocess.run(command)
     return completed_proccess.returncode == 0
 
@@ -58,7 +58,7 @@ def fetch_tags(repo: Repo) -> None:
     for remote in repo.remotes:
         fetch_info = remote.fetch(tags=True)
         for info in fetch_info:
-            logger.info(f"Successfully fetched {info.ref} at {info.commit}")
+            logger.info("Successfully fetched %s at %s", info.ref, info.commit)
 
 
 def get_latest_version(repo: Repo) -> str:
@@ -72,7 +72,7 @@ def chekcout_paths_from_reference(
 ) -> None:
     """Using checkout in sparse mode to bring only one path from reference"""
     for path in paths:
-        logger.info("Get {path} from {reference}")
+        logger.info("Get %s from %s", path, reference)
         repo.git.checkout(reference, "--", path)
 
 
