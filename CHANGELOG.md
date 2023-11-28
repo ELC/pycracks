@@ -2,6 +2,23 @@
 
 
 
+## v0.20.0 (2023-11-28)
+
+### Feature
+
+* feat(cicd): include dependency-review in test pipeline ([`a0fc718`](https://github.com/ELC/pycracks/commit/a0fc718fef1458e471b7203db9537a701a9d060d))
+
+### Fix
+
+* fix(cicd): add pip to dependabot ([`1b6f9f5`](https://github.com/ELC/pycracks/commit/1b6f9f5edf0ac8357725263fdb46263517312280))
+
+### Unknown
+
+* [StepSecurity] Apply security best practices
+
+Signed-off-by: StepSecurity Bot &lt;bot@stepsecurity.io&gt; ([`27211b6`](https://github.com/ELC/pycracks/commit/27211b6783400d0b5db71f392d9c0720308a61a1))
+
+
 ## v0.19.0 (2023-11-28)
 
 ### Feature
