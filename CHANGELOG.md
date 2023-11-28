@@ -10,6 +10,10 @@
 
 ### Fix
 
+* fix(security): remove unused permissions ([`081eb56`](https://github.com/ELC/pycracks/commit/081eb56fd895705fb8b2dc8f9f2bdf5a6487ec51))
+
+* fix(security): use job-specific permissions ([`82564e4`](https://github.com/ELC/pycracks/commit/82564e4443f560139e3e10c42cfbb0c8a57f90a8))
+
 * fix(cicd): use dependabot on develop ([`f586e01`](https://github.com/ELC/pycracks/commit/f586e01790afe7410ee7c0ff9416323319454279))
 
 * fix(cicd): add pip to dependabot ([`1b6f9f5`](https://github.com/ELC/pycracks/commit/1b6f9f5edf0ac8357725263fdb46263517312280))

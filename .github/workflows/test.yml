@@ -11,11 +11,7 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  actions: read
-  contents: write
-  pull-requests: write
-  checks: write
+permissions: read-all
 
 concurrency:
   group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}"
@@ -38,6 +34,9 @@ jobs:
 
   check_changelog:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - name: Harden Runner
