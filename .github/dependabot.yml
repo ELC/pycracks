@@ -2,9 +2,22 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
+    target-branch: "develop"
     schedule:
-      interval: daily
+      interval: weekly
+    groups:
+      backwards-compatible:
+        update-types:
+          - "minor"
+          - "patch"
+
   - package-ecosystem: pip
     directory: /
+    target-branch: "develop"
     schedule:
-      interval: daily
+      interval: weekly
+    groups:
+      backwards-compatible:
+        update-types:
+          - "minor"
+          - "patch"
