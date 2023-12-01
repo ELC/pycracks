@@ -6,6 +6,8 @@ on:
     branches: master
     types: completed
 
+permissions: read-all
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

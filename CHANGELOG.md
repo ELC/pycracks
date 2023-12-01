@@ -2,15 +2,19 @@
 
 
 
-## v0.20.0 (2023-11-28)
+## v0.20.0 (2023-12-01)
 
 ### Feature
+
+* feat(parameters): migrate paths to be a list ([`fe63474`](https://github.com/ELC/pycracks/commit/fe63474441874ff8f92d2263a91adf1d24fa7269))
 
 * feat(security): add fuzzing ([`66d7457`](https://github.com/ELC/pycracks/commit/66d74577cedecc8bbfcbb9d812d6fdb176f34a95))
 
 * feat(cicd): include dependency-review in test pipeline ([`a0fc718`](https://github.com/ELC/pycracks/commit/a0fc718fef1458e471b7203db9537a701a9d060d))
 
 ### Fix
+
+* fix(security): add top-level permissions ([`b8b5d2b`](https://github.com/ELC/pycracks/commit/b8b5d2b5c5057c18728deb72eea603835255a408))
 
 * fix(security): remove unused permissions ([`081eb56`](https://github.com/ELC/pycracks/commit/081eb56fd895705fb8b2dc8f9f2bdf5a6487ec51))
 
@@ -21,6 +25,8 @@
 * fix(cicd): add pip to dependabot ([`1b6f9f5`](https://github.com/ELC/pycracks/commit/1b6f9f5edf0ac8357725263fdb46263517312280))
 
 ### Unknown
+
+* Revert &#34;feat(security): add fuzzing&#34; ([`18fe3a5`](https://github.com/ELC/pycracks/commit/18fe3a5747674edc2262f93a76255be85a5e8131))
 
 * [StepSecurity] Apply security best practices
 
