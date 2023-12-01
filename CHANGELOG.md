@@ -2,9 +2,11 @@
 
 
 
-## v0.20.0 (2023-11-28)
+## v0.20.0 (2023-12-01)
 
 ### Feature
+
+* feat(parameters): migrate paths to be a list ([`fe63474`](https://github.com/ELC/pycracks/commit/fe63474441874ff8f92d2263a91adf1d24fa7269))
 
 * feat(security): add fuzzing ([`66d7457`](https://github.com/ELC/pycracks/commit/66d74577cedecc8bbfcbb9d812d6fdb176f34a95))
 
