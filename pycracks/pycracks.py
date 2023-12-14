@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import shlex
 import subprocess
 from pathlib import Path
 from typing import Iterable
@@ -47,7 +48,7 @@ def get_repo(path: Path = Path()) -> Repo:
 
 
 def run_test_command(test_command: str) -> bool:
-    command = test_command.split(" ")
+    command = shlex.split(test_command)
     logger.info("Running command %s", command)
     completed_proccess = subprocess.run(command)
     return completed_proccess.returncode == 0
