@@ -2,6 +2,13 @@
 
 
 
+## v0.20.1 (2023-12-14)
+
+### Fix
+
+* fix(command): use shlex to split command ([`585e0de`](https://github.com/ELC/pycracks/commit/585e0de5313bafd500a21df3439f7eb7dbc4aced))
+
+
 ## v0.20.0 (2023-12-01)
 
 ### Feature
