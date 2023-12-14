@@ -9,7 +9,7 @@ repos:
       - id: name-tests-test
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.1.6"
+    rev: "v0.1.8"
     hooks:
       - id: ruff
         args:
@@ -18,7 +18,7 @@ repos:
 
   - repo: https://github.com/pycqa/pylint
     # Cannot be replaced by ruff until https://github.com/astral-sh/ruff/issues/970 is closed
-    rev: "v3.0.1"
+    rev: "v3.0.3"
     hooks:
       - id: pylint
         additional_dependencies:
