@@ -38,7 +38,6 @@ pycracks --paths "tests" --target-version "<to-be-release-version>" --test-comma
 pycracks --paths "tests" --target-version "<to-be-release-version>" --test-command "npm run test"
 ```
 
-
 ## Semantic Release
 
 If using the Python-Semantic-Release module, installable with:
