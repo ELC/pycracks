@@ -13,6 +13,15 @@
 * [pre-commit.ci] pre-commit autoupdate
 
 updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.1.8 → v0.3.5](https://github.com/astral-sh/ruff-pre-commit/compare/v0.1.8...v0.3.5)
+- [github.com/pycqa/pylint: v3.0.3 → v3.1.0](https://github.com/pycqa/pylint/compare/v3.0.3...v3.1.0)
+- [github.com/pre-commit/mirrors-mypy: v1.7.1 → v1.9.0](https://github.com/pre-commit/mirrors-mypy/compare/v1.7.1...v1.9.0)
+- [github.com/alessandrojcm/commitlint-pre-commit-hook: v9.10.0 → v9.13.0](https://github.com/alessandrojcm/commitlint-pre-commit-hook/compare/v9.10.0...v9.13.0)
+- [github.com/gitleaks/gitleaks: v8.18.1 → v8.18.2](https://github.com/gitleaks/gitleaks/compare/v8.18.1...v8.18.2) ([`76b33da`](https://github.com/ELC/pycracks/commit/76b33da98d2f38a3a67df999b5f5bebe53dd4396))
+
+* [pre-commit.ci] pre-commit autoupdate
+
+updates:
 - [github.com/astral-sh/ruff-pre-commit: v0.1.8 → v0.3.4](https://github.com/astral-sh/ruff-pre-commit/compare/v0.1.8...v0.3.4)
 - [github.com/pycqa/pylint: v3.0.3 → v3.1.0](https://github.com/pycqa/pylint/compare/v3.0.3...v3.1.0)
 - [github.com/pre-commit/mirrors-mypy: v1.7.1 → v1.9.0](https://github.com/pre-commit/mirrors-mypy/compare/v1.7.1...v1.9.0)
