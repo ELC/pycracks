@@ -2,11 +2,54 @@
 
 
 
+## v0.20.2 (2024-04-01)
+
+### Fix
+
+* fix(config): dummy commit to bump patch ([`d4171ea`](https://github.com/ELC/pycracks/commit/d4171eaee78292b8c6325bf78f7c30ffb8fa7515))
+
+### Unknown
+
+* [pre-commit.ci] pre-commit autoupdate
+
+updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.1.8 → v0.3.5](https://github.com/astral-sh/ruff-pre-commit/compare/v0.1.8...v0.3.5)
+- [github.com/pycqa/pylint: v3.0.3 → v3.1.0](https://github.com/pycqa/pylint/compare/v3.0.3...v3.1.0)
+- [github.com/pre-commit/mirrors-mypy: v1.7.1 → v1.9.0](https://github.com/pre-commit/mirrors-mypy/compare/v1.7.1...v1.9.0)
+- [github.com/alessandrojcm/commitlint-pre-commit-hook: v9.10.0 → v9.13.0](https://github.com/alessandrojcm/commitlint-pre-commit-hook/compare/v9.10.0...v9.13.0)
+- [github.com/gitleaks/gitleaks: v8.18.1 → v8.18.2](https://github.com/gitleaks/gitleaks/compare/v8.18.1...v8.18.2) ([`76b33da`](https://github.com/ELC/pycracks/commit/76b33da98d2f38a3a67df999b5f5bebe53dd4396))
+
+* [pre-commit.ci] pre-commit autoupdate
+
+updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.1.8 → v0.3.4](https://github.com/astral-sh/ruff-pre-commit/compare/v0.1.8...v0.3.4)
+- [github.com/pycqa/pylint: v3.0.3 → v3.1.0](https://github.com/pycqa/pylint/compare/v3.0.3...v3.1.0)
+- [github.com/pre-commit/mirrors-mypy: v1.7.1 → v1.9.0](https://github.com/pre-commit/mirrors-mypy/compare/v1.7.1...v1.9.0)
+- [github.com/alessandrojcm/commitlint-pre-commit-hook: v9.10.0 → v9.13.0](https://github.com/alessandrojcm/commitlint-pre-commit-hook/compare/v9.10.0...v9.13.0)
+- [github.com/gitleaks/gitleaks: v8.18.1 → v8.18.2](https://github.com/gitleaks/gitleaks/compare/v8.18.1...v8.18.2) ([`8a6ee4b`](https://github.com/ELC/pycracks/commit/8a6ee4b9faf7caeee7279ba99b5ca872492d79b4))
+
+* [pre-commit.ci] pre-commit autoupdate
+
+updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.1.8 → v0.3.3](https://github.com/astral-sh/ruff-pre-commit/compare/v0.1.8...v0.3.3)
+- [github.com/pycqa/pylint: v3.0.3 → v3.1.0](https://github.com/pycqa/pylint/compare/v3.0.3...v3.1.0)
+- [github.com/pre-commit/mirrors-mypy: v1.7.1 → v1.9.0](https://github.com/pre-commit/mirrors-mypy/compare/v1.7.1...v1.9.0)
+- [github.com/alessandrojcm/commitlint-pre-commit-hook: v9.10.0 → v9.13.0](https://github.com/alessandrojcm/commitlint-pre-commit-hook/compare/v9.10.0...v9.13.0)
+- [github.com/gitleaks/gitleaks: v8.18.1 → v8.18.2](https://github.com/gitleaks/gitleaks/compare/v8.18.1...v8.18.2) ([`7014d28`](https://github.com/ELC/pycracks/commit/7014d28531c435f4bcc7c4285294675e007c608e))
+
+
 ## v0.20.1 (2023-12-14)
 
 ### Fix
 
 * fix(command): use shlex to split command ([`585e0de`](https://github.com/ELC/pycracks/commit/585e0de5313bafd500a21df3439f7eb7dbc4aced))
+
+### Unknown
+
+* [pre-commit.ci] pre-commit autoupdate
+
+updates:
+- [github.com/astral-sh/ruff-pre-commit: v0.1.6 → v0.1.7](https://github.com/astral-sh/ruff-pre-commit/compare/v0.1.6...v0.1.7) ([`080bed1`](https://github.com/ELC/pycracks/commit/080bed152c19d53cb4ca5100f48f9e749e7de94e))
 
 
 ## v0.20.0 (2023-12-01)
