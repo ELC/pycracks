@@ -49,11 +49,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install pipx==1.2.1 uvx==2.5.1
 
       - name: Update Pre-Commits
         run: |
-          pipx install pre-commit==4.2.0
+          uvx install pre-commit@4.2.0
           pre-commit autoupdate
           differences=$(git diff | xargs)
 
