@@ -45,11 +45,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
-          python-version: "3.8"
+          python-version: "3.9"
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1 uv==0.7.8
+          pip install pipx==1.7.1 uv==0.7.8
 
       - name: Update Pre-Commits
         run: |
