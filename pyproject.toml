@@ -61,7 +61,7 @@ readme = { file = ["README.md"], content-type = "text/markdown" }
 #########################
 
 [tool.semantic_release.branches.main]
-match = "(master|develop)"
+match = "(master|develop|fetch-tag)"
 
 [tool.semantic_release]
 commit_message = "chore(release): bump version and update changelog [skip ci]"

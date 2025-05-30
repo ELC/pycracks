@@ -2,6 +2,33 @@
 
 
 
+## v0.20.3 (2025-05-30)
+
+### Fix
+
+* fix(config): update readme ([`f741c44`](https://github.com/ELC/pycracks/commit/f741c44608199523818285f19fc231704b5f1c54))
+
+### Unknown
+
+* Update pyproject.toml ([`811b917`](https://github.com/ELC/pycracks/commit/811b917112566122e75a075f6e68cb800ecc1ebc))
+
+* Update test.yml ([`554597a`](https://github.com/ELC/pycracks/commit/554597a2d828a3bea96458b8a401b105ebf86ecd))
+
+* Update test.yml ([`98aef52`](https://github.com/ELC/pycracks/commit/98aef52d0e3c1003e4bb5419b5182b18e90e9a6b))
+
+* Update .pre-commit-config.yaml ([`c22b359`](https://github.com/ELC/pycracks/commit/c22b359268b62f080b27f728a61812cddf13aa1a))
+
+* Update .pre-commit-config.yaml ([`25d3928`](https://github.com/ELC/pycracks/commit/25d392873a3d0765c26bfc679f61254ab504336b))
+
+* Update test.yml ([`ac5ceed`](https://github.com/ELC/pycracks/commit/ac5ceedabdaae5df17d7e3ff0fe097369197247b))
+
+* Update test.yml ([`dc94b5d`](https://github.com/ELC/pycracks/commit/dc94b5d897d9b494ee8229386df87924cab61577))
+
+* Update test.yml ([`d3bc731`](https://github.com/ELC/pycracks/commit/d3bc731bf537c1f6f9efae917acf1139b84bc9d7))
+
+* Update fetch tags command ([`4373cb5`](https://github.com/ELC/pycracks/commit/4373cb56139369824a10068370c77a00533c0ee4))
+
+
 ## v0.20.2 (2024-04-01)
 
 ### Fix

@@ -32,7 +32,7 @@ jobs:
 
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
         with:
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Set Up Git Identity
         run: |
@@ -45,15 +45,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
-          python-version: "3.8"
+          python-version: "3.9"
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install pipx==1.7.1 uv==0.7.8
 
       - name: Update Pre-Commits
         run: |
-          pipx install pre-commit==3.5.0
+          uv tool install pre-commit==4.2.0
           pre-commit autoupdate
           differences=$(git diff | xargs)
 
