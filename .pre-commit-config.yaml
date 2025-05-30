@@ -49,6 +49,7 @@ repos:
           - "@commitlint/config-conventional"
         args:
           - "--config=.commitlintrc.json"
+
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.26.0
     hooks:
