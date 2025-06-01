@@ -14,7 +14,7 @@ app = typer.Typer(add_completion=False)
 
 
 @app.callback(invoke_without_command=True)
-def main(
+def main(  # pylint: disable=too-many-positional-arguments
     test_command: Annotated[
         str, typer.Option("--test-command", "-c", help="Command that runs the test")
     ] = "pipenv run test",

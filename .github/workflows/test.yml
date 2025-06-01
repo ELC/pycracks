@@ -45,11 +45,11 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
-          python-version: "3.9"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.7.1 uv==0.7.8
+          pip install uv==0.7.8
 
       - name: Update Pre-Commits
         run: |
@@ -74,7 +74,7 @@ jobs:
 
       - name: Update Version and Changelog
         run: |
-          pipx install python-semantic-release==8.3.0
+          uv tool install python-semantic-release==10.0.2
           semantic-release -v version --no-vcs-release --no-commit
           differences=$(git diff | xargs)
 
@@ -101,10 +101,11 @@ jobs:
     strategy:
       matrix:
         version:
-          - "3.8"
           - "3.9"
           - "3.10"
           - "3.11"
+          - "3.12"
+          - "3.13"
 
     steps:
       - name: Harden Runner
@@ -125,7 +126,7 @@ jobs:
 
       - name: Check Linting and Format
         run: |
-          pip install pre-commit==3.5.0
+          pip install "pre-commit==4.2.0" "pre-commit-uv==4.1.4"
           pre-commit run --all-files
 
       - name: Install Project Dependencies
