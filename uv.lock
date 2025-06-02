@@ -806,10 +806,10 @@ test = [
 
 [package.metadata]
 requires-dist = [
-    { name = "gitpython", specifier = ">=3.1.44" },
-    { name = "packaging", specifier = ">=25.0" },
-    { name = "typer", specifier = ">=0.16.0" },
-    { name = "typing-extensions", specifier = ">=4.13.2" },
+    { name = "gitpython" },
+    { name = "packaging" },
+    { name = "typer" },
+    { name = "typing-extensions" },
 ]
 
 [package.metadata.requires-dev]
