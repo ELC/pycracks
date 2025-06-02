@@ -36,8 +36,7 @@ jobs:
 
       - name: Set Up Git Identity
         run: |
-          git fetch --tags origin 'refs/tags/*:refs/tags/*'
-          git fetch origin "${{ github.REF_NAME }}" || git fetch origin "${{ github.HEAD_REF }}"
+          git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
           git config --global user.email "$(git log -1 --pretty=format:'%ae' | xargs)"
           git config --global user.name "${{ github.actor }}"
