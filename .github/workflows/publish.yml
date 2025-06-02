@@ -49,12 +49,12 @@ jobs:
 
       - name: Build package
         run: |
-          pyproject-build
+          uv run pyproject-build
 
       - name: Determine Target Version
         id: version
         run: |
-          package_version=$(semantic-release -v version --print)
+          package_version=$(uv run semantic-release -v version --print)
           echo "PACKAGE_VERSION=$package_version" >> $GITHUB_ENV
 
       - name: Publish package
