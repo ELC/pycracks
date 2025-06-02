@@ -29,7 +29,7 @@ repos:
           - hypothesis
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.15.0"
+    rev: "v1.16.0"
     hooks:
       - id: mypy
         additional_dependencies:
@@ -49,7 +49,8 @@ repos:
           - "@commitlint/config-conventional"
         args:
           - "--config=.commitlintrc.json"
+
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.26.0
+    rev: v8.27.0
     hooks:
       - id: gitleaks

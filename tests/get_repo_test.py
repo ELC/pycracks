@@ -8,13 +8,13 @@ from git import Repo
 from pycracks.pycracks import get_repo
 
 
-@pytest.fixture()
+@pytest.fixture
 def folder() -> Generator[Path, None, None]:
     with tempfile.TemporaryDirectory() as directory_name:
         yield Path(directory_name)
 
 
-@pytest.fixture()
+@pytest.fixture
 def folder_with_repo(folder: Path) -> Path:
     Repo.init(folder)
     return folder

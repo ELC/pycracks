@@ -61,15 +61,15 @@ readme = { file = ["README.md"], content-type = "text/markdown" }
 #########################
 
 [tool.semantic_release.branches.main]
-match = "(master|develop|fetch-tag)"
+match = "(master|develop)"
 
 [tool.semantic_release]
-commit_message = "chore(release): bump version and update changelog [skip ci]"
+commit_message = "chore(release): bump version and update changelog"
 version_source = "tag"
 version_variables = ["pycracks/__init__.py:__version__"]
+allow_zero_version = true
 
 [tool.semantic_release.changelog]
-changelog_file = "CHANGELOG.md"
 exclude_commit_patterns = ["chore*", "Merge*"]
 
 [tool.semantic_release.commit_parser_options]

@@ -10,11 +10,11 @@ packaging = "*"
 typing-extensions = "*"
 
 [dev-packages]
-black = "*"
-pytest = "*"
-pytest-cov = "*"
-hypothesis = "*"
-pre-commit = "*"
+pytest = "==8.3.5"
+pytest-cov = "==6.1.1"
+hypothesis = "==6.132.0"
+pre-commit = "==4.2.0"
+pre-commit-uv = "==4.1.4"
 
 [scripts]
 test = "pytest --cov --cov-report term-missing:skip-covered --cov-report xml:coverage-report.xml --junitxml=coverage.xml ./tests"
