@@ -30,10 +30,10 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "gitpython>=3.1.44",
-    "packaging>=25.0",
-    "typer>=0.16.0",
-    "typing-extensions>=4.13.2",
+    "gitpython",
+    "packaging",
+    "typer",
+    "typing-extensions",
 ]
 
 [dependency-groups]
