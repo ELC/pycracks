@@ -124,7 +124,7 @@ jobs:
 
       - name: Install Global Dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install pipx==1.7.1
 
       - name: Check Linting and Format
         run: |
