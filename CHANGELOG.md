@@ -15,6 +15,15 @@
 - **release**: Trigger changelog generation
   ([`5327450`](https://github.com/ELC/pycracks/commit/53274506f2f6d64b083d276c00e9687620eb04e9))
 
+- **workflow**: Add verbose flag to semantic-release command
+  ([`384bb76`](https://github.com/ELC/pycracks/commit/384bb76ca0f67e111404ea8abd88831200df2894))
+
+- **workflow**: Update semantic-release command syntax
+  ([`f1791fb`](https://github.com/ELC/pycracks/commit/f1791fb0993cbc0dfc24dc84bd76f2af9527a53a))
+
+- **workflow**: Update semantic-release command verbosity
+  ([`48c6b54`](https://github.com/ELC/pycracks/commit/48c6b54ab75e8aa3019326384d1f69de82b25a7c))
+
 
 ## v0.20.2 (2024-04-01)
 
