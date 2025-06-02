@@ -18,6 +18,9 @@
 - **workflow**: Add verbose flag to semantic-release command
   ([`384bb76`](https://github.com/ELC/pycracks/commit/384bb76ca0f67e111404ea8abd88831200df2894))
 
+- **workflow**: Improve Git identity setup
+  ([`1e86a25`](https://github.com/ELC/pycracks/commit/1e86a25996e73895f258281a263ed9fc6790fec0))
+
 - **workflow**: Update semantic-release command syntax
   ([`f1791fb`](https://github.com/ELC/pycracks/commit/f1791fb0993cbc0dfc24dc84bd76f2af9527a53a))
 
