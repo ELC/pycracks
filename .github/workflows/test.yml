@@ -32,15 +32,17 @@ jobs:
 
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
         with:
-          persist-credentials: true
+          persist-credentials: false
 
       - name: Set Up Git Identity
         run: |
-          git fetch -v -v -v --all --unshallow
+          git fetch --tags origin 'refs/tags/*:refs/tags/*'
+          git fetch origin "${{ github.REF_NAME }}" || git fetch origin "${{ github.HEAD_REF }}"
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
           git config --global user.email "$(git log -1 --pretty=format:'%ae' | xargs)"
           git config --global user.name "${{ github.actor }}"
           git remote set-url origin "https://${{ github.actor }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }}"
+          git config --list
 
       - name: Set up Python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
@@ -75,7 +77,9 @@ jobs:
       - name: Update Version and Changelog
         run: |
           uv tool install python-semantic-release==10.0.2
-          semantic-release -v version --no-vcs-release --no-commit
+          rm -f CHANGELOG.md
+          semantic-release version --no-tag --no-commit --skip-build --changelog
+
           differences=$(git diff | xargs)
 
           if [ -z "$differences" ]; then
@@ -105,7 +109,6 @@ jobs:
           - "3.10"
           - "3.11"
           - "3.12"
-          - "3.13"
 
     steps:
       - name: Harden Runner
@@ -131,7 +134,7 @@ jobs:
 
       - name: Install Project Dependencies
         run: |
-          pipx install pipenv==2023.2.4
+          pipx install pipenv==2025.0.3
           pipenv install --dev --deploy
 
       - name: Run Tests
@@ -143,7 +146,7 @@ jobs:
           git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
           pipx install .
-          pipx install python-semantic-release==8.3.0
+          pipx install python-semantic-release==10.0.2
           pycracks -vv -t "$(semantic-release -v version --print)"
 
       - name: Upload coverage to Coveralls
@@ -158,8 +161,8 @@ jobs:
 
       - name: Check Build and Wheel
         run: |
-          pipx run build==1.0.3
-          pipx run twine==4.0.2 check --strict dist/*
+          pipx run build==1.2.2
+          pipx run twine==6.1.0 check --strict dist/*
 
   test-finish:
     needs: test
