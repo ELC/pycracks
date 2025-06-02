@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import shlex
 import subprocess
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import git.exc
 from git import Repo

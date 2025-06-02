@@ -5,7 +5,7 @@ on:
     workflows: Test
     branches: master
     types: completed
-  
+
   workflow_dispatch:
 
 permissions: read-all
@@ -45,16 +45,16 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv==0.7.8
+          uv sync --group build --group lint
 
       - name: Build package
         run: |
-          uv tool run --from build==1.2.2 pyproject-build
+          uv run pyproject-build
 
       - name: Determine Target Version
         id: version
         run: |
-          uv tool install python-semantic-release==10.0.2
-          package_version=$(semantic-release -v version --print)
+          package_version=$(uv run semantic-release -v version --print)
           echo "PACKAGE_VERSION=$package_version" >> $GITHUB_ENV
 
       - name: Publish package

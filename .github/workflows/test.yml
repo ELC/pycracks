@@ -51,11 +51,12 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv==0.7.8
+          uv sync --group lint
 
       - name: Update Pre-Commits
         run: |
-          uv tool install pre-commit==4.2.0
-          pre-commit autoupdate
+          uv run pre-commit run --all-files
+
           differences=$(git diff | xargs)
 
           if [ -z "$differences" ]; then
@@ -75,9 +76,8 @@ jobs:
 
       - name: Update Version and Changelog
         run: |
-          uv tool install python-semantic-release==10.0.2
           rm -f CHANGELOG.md
-          semantic-release version --no-tag --no-commit --skip-build --changelog
+          uv run semantic-release version --no-tag --no-commit --skip-build --changelog
 
           differences=$(git diff | xargs)
 
@@ -124,29 +124,19 @@ jobs:
 
       - name: Install Global Dependencies
         run: |
-          pip install pipx==1.7.1
-
-      - name: Check Linting and Format
-        run: |
-          pip install "pre-commit==4.2.0" "pre-commit-uv==4.1.4"
-          pre-commit run --all-files
-
-      - name: Install Project Dependencies
-        run: |
-          pipx install pipenv==2025.0.3
-          pipenv install --dev --deploy
+          pip install uv==0.7.8
+          uv sync --group lint --group test --group build
 
       - name: Run Tests
         run: |
-          pipenv run test
+          uv run pytest --cov --cov-report term-missing:skip-covered --cov-report xml:coverage-report.xml --junitxml=coverage.xml ./tests
 
       - name: Check Breaking changes
         run: |
           git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
-          pipx install .
-          pipx install python-semantic-release==10.0.2
-          pycracks -vv -t "$(semantic-release -v version --print)"
+          package_version=$(uv run semantic-release -v version --print)
+          uv run pycracks -vv -t "$package_version"
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@3dfc5567390f6fa9267c0ee9c251e4c8c3f18949 # v2.2.3
@@ -160,8 +150,8 @@ jobs:
 
       - name: Check Build and Wheel
         run: |
-          pipx run build==1.2.2
-          pipx run twine==6.1.0 check --strict dist/*
+          uv run pyproject-build
+          uv run twine check --strict dist/*
 
   test-finish:
     needs: test

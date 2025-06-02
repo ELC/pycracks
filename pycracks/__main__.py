@@ -1,10 +1,9 @@
 import logging
 from pathlib import Path
-from typing import List, Optional
+from typing import Annotated, Optional
 
 import typer
 from packaging.version import parse
-from typing_extensions import Annotated
 
 from . import __version__
 from .logger import logger
@@ -12,14 +11,19 @@ from .pycracks import run
 
 app = typer.Typer(add_completion=False)
 
+TEST_COMMAND = (
+    "pytest --cov --cov-report term-missing:skip-covered "
+    "--cov-report xml:coverage-report.xml --junitxml=coverage.xml ./tests"
+)
+
 
 @app.callback(invoke_without_command=True)
 def main(  # pylint: disable=too-many-positional-arguments
     test_command: Annotated[
         str, typer.Option("--test-command", "-c", help="Command that runs the test")
-    ] = "pipenv run test",
+    ] = TEST_COMMAND,
     paths: Annotated[
-        Optional[List[str]], typer.Option("--path", "-p", help="Paths to checkout")
+        Optional[list[str]], typer.Option("--path", "-p", help="Paths to checkout")
     ] = None,
     target_version: Annotated[
         str, typer.Option("--target-version", "-t", help="Version to release")
