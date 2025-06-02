@@ -5,6 +5,8 @@ on:
     workflows: Test
     branches: master
     types: completed
+  
+  workflow_dispatch:
 
 permissions: read-all
 
