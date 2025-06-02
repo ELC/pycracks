@@ -78,7 +78,7 @@ jobs:
         run: |
           uv tool install python-semantic-release==10.0.2
           rm -f CHANGELOG.md
-          semantic-release version --no-tag --no-commit --skip-build --changelog -vv
+          semantic-release -vv version --no-tag --no-commit --skip-build --changelog
 
           differences=$(git diff | xargs)
 
