@@ -45,15 +45,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv==0.7.8
+          uv pip sync --system --extra build,lint
 
       - name: Build package
         run: |
-          uv tool run --from build==1.2.2 pyproject-build
+          pyproject-build
 
       - name: Determine Target Version
         id: version
         run: |
-          uv tool install python-semantic-release==10.0.2
           package_version=$(semantic-release -v version --print)
           echo "PACKAGE_VERSION=$package_version" >> $GITHUB_ENV
 

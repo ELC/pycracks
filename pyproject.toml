@@ -12,7 +12,7 @@ authors = [
     { name = "Ezequiel L. Castaño", email = "castanoezequielleonardo@gmail.com" },
 ]
 license = { text = "MIT" }
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dynamic = ['version', 'readme']
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -28,6 +28,30 @@ classifiers = [
     "Topic :: Software Development :: Testing",
     "Topic :: Software Development :: Version Control :: Git",
     "Typing :: Typed",
+]
+dependencies = [
+    "gitpython>=3.1.44",
+    "packaging>=25.0",
+    "typer>=0.16.0",
+    "typing-extensions>=4.13.2",
+]
+
+[dependency-groups]
+build = [
+    "build>=1.2.2",
+    "twine>=6.1.0",
+]
+
+lint = [
+    "pre-commit>=4.2.0",
+    "pre-commit-uv>=4.1.4",
+    "python-semantic-release>=10.0.2",
+]
+
+test = [
+    "hypothesis>=6.113.0",
+    "pytest>=8.3.5",
+    "pytest-cov>=5.0.0",
 ]
 
 [project.urls]
@@ -49,12 +73,6 @@ pycracks = ["py.typed", "*.md"]
 [tool.setuptools.dynamic]
 version = { attr = "pycracks.__version__" }
 readme = { file = ["README.md"], content-type = "text/markdown" }
-
-#########################
-# Setuptools-Pipfile
-#########################
-
-[tool.setuptools-pipfile]
 
 #########################
 # Semantic Release

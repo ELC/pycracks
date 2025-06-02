@@ -17,7 +17,7 @@ app = typer.Typer(add_completion=False)
 def main(  # pylint: disable=too-many-positional-arguments
     test_command: Annotated[
         str, typer.Option("--test-command", "-c", help="Command that runs the test")
-    ] = "pipenv run test",
+    ] = "pytest --cov --cov-report term-missing:skip-covered --cov-report xml:coverage-report.xml --junitxml=coverage.xml ./tests",
     paths: Annotated[
         Optional[List[str]], typer.Option("--path", "-p", help="Paths to checkout")
     ] = None,
