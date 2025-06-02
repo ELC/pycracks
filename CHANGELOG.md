@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.21.0 (2025-06-02)
+
+### Features
+
+- **dependencies**: Refactor code structure for improved readability and maintainability
+  ([`a5a4c19`](https://github.com/ELC/pycracks/commit/a5a4c19c6de43a9df60d9b710450b2dd81a3c00f))
+
+
 ## v0.20.3 (2025-06-02)
 
 ### Bug Fixes
