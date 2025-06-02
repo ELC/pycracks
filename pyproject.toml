@@ -193,7 +193,7 @@ load-plugins = [
     "pylint.extensions.typing",
     "pylint.extensions.while_used",
 ]
-py-version = "3.8"
+py-version = "3.9"
 suggestion-mode = true
 
 [tool.pylint.basic]

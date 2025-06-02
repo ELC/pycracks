@@ -55,7 +55,8 @@ jobs:
 
       - name: Update Pre-Commits
         run: |
-          uv run pre-commit autoupdate
+          uv run pre-commit run pre-commit-update
+
           differences=$(git diff | xargs)
 
           if [ -z "$differences" ]; then

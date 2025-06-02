@@ -1,6 +1,6 @@
 import tempfile
+from collections.abc import Generator
 from pathlib import Path
-from typing import Generator
 
 import pytest
 from git import Repo
@@ -9,7 +9,7 @@ from pycracks.pycracks import get_repo
 
 
 @pytest.fixture
-def folder() -> Generator[Path, None, None]:
+def folder() -> Generator[Path]:
     with tempfile.TemporaryDirectory() as directory_name:
         yield Path(directory_name)
 
