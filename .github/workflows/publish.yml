@@ -45,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv==0.7.8
-          uv pip sync --system --extra build,lint
+          uv sync --system --group build --group lint
 
       - name: Build package
         run: |

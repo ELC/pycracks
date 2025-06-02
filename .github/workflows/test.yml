@@ -51,7 +51,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv==0.7.8
-          uv pip sync --system --extra lint
+          uv sync --system --group lint
 
       - name: Update Pre-Commits
         run: |
@@ -127,12 +127,12 @@ jobs:
 
       - name: Check Linting and Format
         run: |
-          uv pip sync --system --extra lint
+          uv sync --system --group lint
           pre-commit run --all-files
 
       - name: Install Project Dependencies
         run: |
-          uv pip sync --system --extra test
+          uv sync --system --group test
 
       - name: Run Tests
         run: |
@@ -142,7 +142,7 @@ jobs:
         run: |
           git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
-          uv pip sync --system --extra lint
+          uv sync --system --group lint
           pycracks -vv -t "$(semantic-release -v version --print)"
 
       - name: Upload coverage to Coveralls
@@ -157,7 +157,7 @@ jobs:
 
       - name: Check Build and Wheel
         run: |
-          uv pip sync --system --extra build
+          uv sync --system --group build
           pyproject-build
           twine check --strict dist/*
 
