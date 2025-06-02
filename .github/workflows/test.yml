@@ -41,19 +41,20 @@ jobs:
           git config --global user.email "$(git log -1 --pretty=format:'%ae' | xargs)"
           git config --global user.name "${{ github.actor }}"
           git remote set-url origin "https://${{ github.actor }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }}"
+          git config --list
 
       - name: Set up Python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
-          python-version: "3.8"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install uv==0.7.8
+          uv pip sync --system --extra lint
 
       - name: Update Pre-Commits
         run: |
-          pipx install pre-commit==3.5.0
           pre-commit autoupdate
           differences=$(git diff | xargs)
 
@@ -74,8 +75,9 @@ jobs:
 
       - name: Update Version and Changelog
         run: |
-          pipx install python-semantic-release==8.3.0
-          semantic-release -v version --no-vcs-release --no-commit
+          rm -f CHANGELOG.md
+          semantic-release version --no-tag --no-commit --skip-build --changelog
+
           differences=$(git diff | xargs)
 
           if [ -z "$differences" ]; then
@@ -101,10 +103,10 @@ jobs:
     strategy:
       matrix:
         version:
-          - "3.8"
           - "3.9"
           - "3.10"
           - "3.11"
+          - "3.12"
 
     steps:
       - name: Harden Runner
@@ -121,28 +123,26 @@ jobs:
 
       - name: Install Global Dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install uv==0.7.8
 
       - name: Check Linting and Format
         run: |
-          pip install pre-commit==3.5.0
+          uv pip sync --system --extra lint
           pre-commit run --all-files
 
       - name: Install Project Dependencies
         run: |
-          pipx install pipenv==2023.2.4
-          pipenv install --dev --deploy
+          uv pip sync --system --extra test
 
       - name: Run Tests
         run: |
-          pipenv run test
+          pytest --cov --cov-report term-missing:skip-covered --cov-report xml:coverage-report.xml --junitxml=coverage.xml ./tests
 
       - name: Check Breaking changes
         run: |
           git fetch -v -v -v --all --unshallow
           git switch "${{ github.REF_NAME }}" || git switch "${{ github.HEAD_REF }}"
-          pipx install .
-          pipx install python-semantic-release==8.3.0
+          uv pip sync --system --extra lint
           pycracks -vv -t "$(semantic-release -v version --print)"
 
       - name: Upload coverage to Coveralls
@@ -157,8 +157,9 @@ jobs:
 
       - name: Check Build and Wheel
         run: |
-          pipx run build==1.0.3
-          pipx run twine==4.0.2 check --strict dist/*
+          uv pip sync --system --extra build
+          pyproject-build
+          twine check --strict dist/*
 
   test-finish:
     needs: test

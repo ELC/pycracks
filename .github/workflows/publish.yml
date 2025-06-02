@@ -5,6 +5,8 @@ on:
     workflows: Test
     branches: master
     types: completed
+  
+  workflow_dispatch:
 
 permissions: read-all
 
@@ -38,20 +40,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
-          python-version: "3.8"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
-          pip install pipx==1.2.1
+          pip install uv==0.7.8
+          uv pip sync --system --extra build,lint
 
       - name: Build package
         run: |
-          pipx run build
+          pyproject-build
 
       - name: Determine Target Version
         id: version
         run: |
-          pipx install python-semantic-release==8.3.0
           package_version=$(semantic-release -v version --print)
           echo "PACKAGE_VERSION=$package_version" >> $GITHUB_ENV
 

@@ -57,7 +57,7 @@ def run_test_command(test_command: str) -> bool:
 def fetch_tags(repo: Repo) -> None:
     logger.info("Fetching Tags")
     for remote in repo.remotes:
-        fetch_info = remote.fetch(tags=True)
+        fetch_info = remote.fetch("refs/tags/*:refs/tags/*", tags=True)
         for info in fetch_info:
             logger.info("Successfully fetched %s at %s", info.ref, info.commit)
 
