@@ -55,7 +55,7 @@ jobs:
 
       - name: Update Pre-Commits
         run: |
-          uv run pre-commit run pre-commit-update
+          uv run pre-commit run --all-files
 
           differences=$(git diff | xargs)
 
@@ -126,10 +126,6 @@ jobs:
         run: |
           pip install uv==0.7.8
           uv sync --group lint --group test --group build
-
-      - name: Check Linting and Format
-        run: |
-          uv run pre-commit run --all-files
 
       - name: Run Tests
         run: |
